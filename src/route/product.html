@@ -1,0 +1,57 @@
+<!-- Content section -->
+<section class="py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 ">
+				<h1>{{product.title}}</h1>
+				<p class="lead">{{product.descriptionShort}}</p>
+				<p class="py-2">{{product.descriptionLong}}</p>
+
+			</div>
+			<div class="col-md-4 offset-md-1 py-5">
+
+				<div class="card" style="width: 20rem;">
+					<img ng-src="{{ product.image.fields.file.url }}" class="img-fluid card-img">
+
+					<div class="card-body">
+						<h4 class="card-title">Purchase ${{product.cost}}</h4>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<button type="button" class="btn btn-success">Purchase</button>
+						
+					</div>
+					
+				</div>
+
+				<div class="py-5">
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Related Products</h1>				
+			</div>
+		</div>
+
+		<div class="row py-4">
+				<div class="col-lg-4 col-md-6 mb-4" ng-repeat="product in product.relatedProducts">
+					<div class="card h-100">
+						<a href="#">
+							<img class="card-img-top" ng-src="{{ product.fields.image.fields.file.url }}">
+						</a>
+						<div class="card-body">
+							<h4 class="card-title">
+								<a ui-sref="product({ product : product.fields.urlSlug })">{{ product.fields.title }}</a>
+							</h4>
+							<p class="card-text">{{ product.fields.descriptionShort }}</p>
+						</div>
+						<div class="card-footer">
+							<small>Starting from <strong>${{ product.fields.cost }}</strong></small>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</div>
+</section>

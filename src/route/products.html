@@ -1,0 +1,39 @@
+<!-- Content section -->
+<section class="py-5">
+	<div class="container">
+
+		<div class="row py-5">
+			<div class="col-md-8">
+				<h2>
+					<a ui-sref="products">{{productLine.title}}</a>
+				</h2>
+				<p class="lead py-2">{{productLine.descriptionShort}}</p>
+			</div>
+			<div class="col-md-4">
+				<a ui-sref="products">
+					<img class="featurette-image img-fluid mx-auto img-thumbnail" ng-src="{{productLine.image.fields.file.url}}">
+				</a>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4 col-md-6 mb-4" ng-repeat="product in productLine.products">
+				<div class="card h-100">
+					<a href="#">
+						<img class="card-img-top" ng-src="{{ product.fields.image.fields.file.url }}">
+					</a>
+					<div class="card-body">
+						<h4 class="card-title">
+							<a ui-sref="product({ product : product.fields.urlSlug })">{{ product.fields.title }}</a>
+						</h4>
+						<p class="card-text">{{ product.fields.descriptionShort }}</p>
+					</div>
+					<div class="card-footer">
+						<small>Starting from <strong>${{ product.fields.cost }}</strong></small>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>

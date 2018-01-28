@@ -1,0 +1,10 @@
+.DS_Store
+/node_modules/
+/lib/**/*.gzip
+/lib/**/*.md
+/lib/**/*.yml
+/lib/**/LICENSE
+/lib/**/package.json
+/lib/**/Gruntfile*
+/lib/**/Makefile*
+*.tmp.js

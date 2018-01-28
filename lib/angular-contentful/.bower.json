@@ -1,0 +1,46 @@
+{
+  "name": "angular-contentful",
+  "version": "2.2.0",
+  "authors": [
+    {
+      "name": "Jurgen Van de Moere",
+      "email": "jurgen.van.de.moere@gmail.com"
+    }
+  ],
+  "keywords": [
+    "angular",
+    "angularjs",
+    "cms",
+    "contentful",
+    "contentful delivery api"
+  ],
+  "main": [
+    "dist/angular-contentful.js"
+  ],
+  "ignore": [
+    "src",
+    "test",
+    "gulpfile.js",
+    "karma-dist-concatenated.conf.js",
+    "karma-dist-minified.conf.js",
+    "karma-src.conf.js",
+    "**/.*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "angular-mocks": ">=1.2.0 <1.5.0",
+    "angular-scenario": ">=1.2.0 <1.5.0",
+    "angular": ">=1.2.0 <1.5.0"
+  },
+  "homepage": "https://github.com/jvandemo/angular-contentful",
+  "_release": "2.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.2.0",
+    "commit": "d3615c66abe52c8080ff48e721677632c3fb8ffc"
+  },
+  "_source": "https://github.com/jvandemo/angular-contentful.git",
+  "_target": "^2.2.0",
+  "_originalSource": "angular-contentful",
+  "_direct": true
+}
