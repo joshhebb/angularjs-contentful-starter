@@ -13,6 +13,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.3",
     "gulp-run": "^1.6.7",
+    "gulp-sass": "^3.1.0",
     "gulp-sync": "^0.1.4",
     "gulp-uglify": "^1.1.0",
     "gulp-usemin": "^0.3.11",
@@ -22,13 +23,16 @@
     "Josh Hebb <jfhebb@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "**",
+  "homepage": "https://bitbucket.org/jfhebb/angular-contentful-starter",
   "repository": {
     "type": "git",
-    "url": "**"
+    "url": "https://bitbucket.org/jfhebb/angular-contentful-starter"
   },
   "scripts": {
     "init": "npm install && bower install && gulp build"
   },
-  "main": "index.html"
+  "main": "index.html",
+  "dependencies": {
+    "gulp-concat": "^2.6.1"
+  }
 }

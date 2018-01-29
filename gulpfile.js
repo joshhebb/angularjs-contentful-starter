@@ -6,13 +6,19 @@ var gulp = require("gulp"),
 	templatecache = require("gulp-angular-templatecache"),
 	usemin = require("gulp-usemin"),
 	uglify = require("gulp-uglify"),
+	concat = require('gulp-concat'),
 	minifyCss = require("gulp-minify-css"),
 	minifyHtml = require("gulp-minify-html"),
 	replace = require("gulp-replace"),
 	run = require("gulp-run"),
 	connect = require("gulp-connect");
+	sass = require('gulp-sass');
+
 
 var pkg = require("./package.json"),
+
+	// CSS page name
+	cssFile = "index.css",
 
 	// index page path
 	root = ".",
@@ -28,10 +34,11 @@ var banner = [
 		" * License: " + pkg.license,
 		" */\n\n"
 	].join("\n"),
+
 	paths = {
 		"tmpl": [root+"/src/**/*.html"],
 		"js": ["!**/*.tmp.js", "!**/*.test.js", "!"+root+"/src/**/*.min.js", root+"/src/**/*.js"],
-		"css": ["!"+root+"/src/**/*.min.css", root+"/src/**/*.css"]
+		"css": ["!"+root+"/src/**/*.min.scss", root+"/src/**/*.scss"]
 	},
 	ngModule = pkg.name;
 
@@ -47,27 +54,31 @@ pages.forEach(function(page) {
 });
 
 gulp.task("build", sync.sync([
-	// stage 1: build resource
+	// Build resources
 	["css", "js", "tmpl", "bower.json"],
 
-	// stage 2: build pages sources
+	// Build page sources
 	pages.map(function(page) { return page + ".src.html"; }),
 
-	// stage 3: build release pages
+	// Build release pages
 	pages.map(function(page) { return page + ".html"; })
 ]));
 
-gulp.task("default", sync.sync([
-	["build"],
-	["watch"]
-]));
+// Default Task - Build & Watch
+gulp.task("default", sync.sync([ ["build"], ["watch"] ]));
 
+// gulp dev (watch)
 gulp.task("dev", ["watch"]);
 
+// gulp up (update npm & bower)
 gulp.task("up", ["update-npm", "update-bower"]);
 
+// gulp CSS (compile sass, concat into single file and reload)
 gulp.task("css", function(done) {
 	gulp.src(paths.css)
+		.pipe(sass())
+		.pipe(concat(cssFile))
+		.pipe(gulp.dest(root+"/src/"))
 		.pipe(connect.reload())
 		.on("end", done);
 });
@@ -78,6 +89,8 @@ gulp.task("js", function(done) {
 		.on("end", done);
 });
 
+// gulp tmpl 
+// All angular templates get put into a template cache 
 gulp.task("tmpl", function(done) {
 	gulp.src(paths.tmpl)
 		.pipe(templatecache("angular-template.tmp.js", {
@@ -88,6 +101,29 @@ gulp.task("tmpl", function(done) {
 		.pipe(connect.reload())
 		.on("end", done);
 });
+
+gulp.task("watch", function() { ["tmpl", "css", "js"]
+		.concat(pages.map(function(page) { return page + ".src.html"; }))
+		.forEach(function(i) {
+			gulp.watch(paths[i], function(i) {
+				return function() {
+					gulp.src(paths['css'])
+						.pipe(sass())
+						.pipe(concat(cssFile))
+						.pipe(gulp.dest(root+"/src/"));
+						
+					gulp.src(paths[i])
+						.pipe(connect.reload());
+				};
+			}(i));
+		});
+	connect.server({
+		root: root,
+		port: 9000,
+		livereload: true
+	});
+});
+
 
 // generate task of pages
 pages.forEach(function(page) {
@@ -148,25 +184,7 @@ gulp.task("update-bower", function(done) {
 	for (i in bowerjson.dependencies) {
 		deps.push(i);
 	}
+
 	cmd = "bower install --save --force-latest " + deps.join(" ");
 	run(cmd).exec().on("end", done);
-});
-
-gulp.task("watch", function() {
-	["tmpl", "css", "js"]
-		.concat(pages.map(function(page) { return page + ".src.html"; }))
-		.forEach(function(i) {
-			gulp.watch(paths[i], function(i) {
-				return function() {
-					gulp.src(paths[i])
-						.pipe(connect.reload());
-				};
-			}(i));
-		});
-
-	connect.server({
-		root: root,
-		port: 9000,
-		livereload: true
-	});
 });

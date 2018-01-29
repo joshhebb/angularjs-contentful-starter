@@ -1,0 +1,32 @@
+<!-- Content section -->
+<section class="py-5">
+	<div class="container">
+		<div class="row">
+			<!-- Store Left Column (Title, Subtitle & Description in markdown) -->
+			<div class="col-md-7">
+				<h1 class="display-4">{{store.title}}</h1>
+				<h3 class="py-2">{{store.subtitle}}</h3>
+
+				<!-- Render out the description in markdown -->
+				<p class="py-2 rtf" marked="store.description"></p>
+			</div>
+
+			<div class="col-md-4 offset-md-1 mt-5">
+				<div class="my-5">
+					<h4>Store Locator</h4>
+					<div class="my-4 border">
+						<!-- Render the Google Map using the ngMap library. -->
+						<ng-map center="{{ store.location.lat }}, {{ store.location.lon }}" zoom="18"></ng-map>
+					</div>
+				</div>
+
+				<div class="my-5">
+					<h4 class="pb-3">Available In Store</h4>
+
+					<!-- Call our custom angular directive to render a list of featured products.  -->
+					<featured-products products="store.products"></featured-products>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

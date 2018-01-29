@@ -3,19 +3,18 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
 	$urlRouterProvider.otherwise("/");
 
 	$stateProvider
-		.state("index", {
+
+		// Default Home State. Displays home.html but has no associated controller.
+		.state("home", {
 			url: "/",
-			templateUrl: "src/route/index.html",
+			templateUrl: "src/views/home.html",
 		})
 
-		.state("info", {
-			url: "/information",
-			templateUrl: "src/route/info.html",
-		})
-
+		// Products Landing Page. Pulls a 'Line of Products' from contentful.
 		.state("products", {
 			url: "/products/:productLine",
-			templateUrl: "src/route/products.html",
+			templateUrl: "src/views/products.html",
+			// Inline Controller. Can be defined in this file, or it's own file and referenced by name.
 			controller: function ($scope, $stateParams, contentful) {
 				contentful
 					.entries('content_type=productLine&fields.urlSlug=' + $stateParams.productLine).then(
@@ -28,9 +27,25 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
 				}
 		})
 
+		// Product Landing Page (Single Product) accessed from a Product Line (i.e. /headphones/beats-by-dre/)
 		.state("product", {
 			url: "/products/:productLine/:product",
-			templateUrl: "src/route/product.html",
+			templateUrl: "src/views/product.html",
+			controller: function ($scope, $stateParams, contentful) {
+				contentful
+					.entries('content_type=product&fields.urlSlug=' + $stateParams.product).then(
+						function (response) {
+							if (response.data && response.data.items && response.data.items.length > 0) {
+								$scope.product = response.data.items[0].fields;
+							}
+						}
+					);
+				}
+		})
+
+		.state("singleProduct", {
+			url: "/product/:product",
+			templateUrl: "src/views/product.html",
 			controller: function ($scope, $stateParams, contentful) {
 				contentful
 					.entries('content_type=product&fields.urlSlug=' + $stateParams.product).then(
@@ -45,7 +60,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
 
 		.state("article", {
 			url: "/article/:articleTitle",
-			templateUrl: "src/route/article.html",
+			templateUrl: "src/views/article.html",
 			controller: function ($scope, $stateParams, contentful) {
 				contentful
 					.entries('content_type=blogArticle&fields.urlSlug=' + $stateParams.articleTitle).then(
@@ -58,15 +73,15 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
 			}
 		})
 
-		.state("event", {
-			url: "/event/:eventTitle",
-			templateUrl: "src/route/event.html",
+		.state("location", {
+			url: "/location/:locationTitle",
+			templateUrl: "src/views/location.html",
 			controller: function ($scope, $stateParams, contentful) {
 				contentful
-					.entries('content_type=event&fields.urlSlug=' + $stateParams.eventTitle) .then(
+					.entries('content_type=event&fields.urlSlug=' + $stateParams.locationTitle) .then(
 						function (response) {
 							if (response.data && response.data.items && response.data.items.length > 0) {
-								$scope.event = response.data.items[0].fields;
+								$scope.store = response.data.items[0].fields;
 							}
 						}
 					);

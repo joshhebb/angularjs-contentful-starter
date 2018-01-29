@@ -1,0 +1,28 @@
+<!-- Content Article -->
+<section class="py-5">
+	<div class="container">
+		<div class="row">
+
+			<!-- Article Title & Description (markdown) -->
+			<div class="col-md-7">
+				<h1>{{ article.title }}</h1>
+				<p class="py-4 rtf" marked="article.longDescription"></p>
+			</div>
+			<!-- Featured Article Image -->
+			<div class="col-md-4 offset-md-1">
+				<img ng-src="{{ article.image.fields.file.url }}" class="img-fluid img-thumbnail">
+			</div>
+		</div>
+
+		<!-- Article Author -->
+		<div class="row py-4" ng-if="article.author">
+			<div class="col-md-2">
+				<img ng-src="{{ article.author.fields.image.fields.file.url }}" class="img-fluid img-thumbnail">
+			</div>
+			<div class="col-md-10">
+				<h4>Author <strong>{{article.author.fields.firstName}} {{article.author.fields.lastName}}</strong></h4>
+				<p marked="article.author.fields.description"></p>
+			</div>
+		</div>
+	</div>
+</section>

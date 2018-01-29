@@ -1,0 +1,9 @@
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="product in products">
+        <a href="#" ui-sref="singleProduct({ product: product.fields.urlSlug })">
+            {{product.fields.title}}
+            <span class="badge badge-primary mx-3" ng-if="product.fields.additionalProducts">Special Offer</span>
+        </a>
+        <span class="pull-right small">Starting at <strong>${{product.fields.cost}}</strong> </span>
+    </li>
+</ul>
