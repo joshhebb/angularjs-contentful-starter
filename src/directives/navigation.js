@@ -5,9 +5,10 @@
  * @Author Josh Hebb
  * 
  */
-app.directive("header", function() {
+app.directive("navigation", function() {
 	return {
         restrict: 'E',
-        templateUrl: "src/views/header.html"
+        replace: true,
+        templateUrl: "src/views/navigation.html"
     }
-});
+}); 

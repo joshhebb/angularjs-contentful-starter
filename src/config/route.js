@@ -41,7 +41,6 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
 				contentful
 					.entries('content_type=productLine&fields.urlSlug=' + $stateParams.productLine).then(
 						function (response) {
-							console.log(response);
 							if (response.data && response.data.items && response.data.items.length > 0) {
 								$scope.productLine = response.data.items[0].fields; } } );
 				}

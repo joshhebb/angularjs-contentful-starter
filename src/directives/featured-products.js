@@ -8,6 +8,7 @@
 app.directive("featuredProducts", function() {
 	return {
         restrict: 'E',
+        replace: true,
         scope: {
             products: '='
         },

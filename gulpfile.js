@@ -153,7 +153,6 @@ pages.forEach(function(page) {
 					],
 					js: [
 						replace(/\.version = \"0\";/, ".version = \"" + pkg.version + "\""),
-						uglify(),
 						header(banner)
 					],
 					html: [

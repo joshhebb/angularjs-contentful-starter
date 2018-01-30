@@ -1,15 +1,14 @@
 <!-- Header Carousel -->
 <header>
     <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
-
         <!-- Render the Carousel (data is passed from carousel.js query to contentful) -->
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item" ng-repeat="banner in banners" ng-class="{ active : $first }" ng-style="{ 'background-image': 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), 
-                    url(' + banner.fields.backgroundImage.fields.file.url + ')' }">
+            <div class="carousel-item" ng-repeat="banner in banners" ng-class="{ active : $first }" 
+                ng-style="{ 'background-image': 'linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(' + banner.fields.backgroundImage.fields.file.url + ')' }">
 
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block text-left offset-md-1">
                     <h3 class="display-5">{{ banner.fields.title }}</h3>
-                    <p class="col-md-6 offset-md-3">{{ banner.fields.bannerText }}</p>
+                    <h5>{{ banner.fields.bannerText }}</h5>
                 </div>
             </div>
         </div>

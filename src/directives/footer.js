@@ -8,6 +8,7 @@
 app.directive("footerSection", function() {
 	return {
         restrict: 'E',
+        replace: true,
         templateUrl: "src/views/footer.html"
     }
 });

@@ -6,14 +6,16 @@
  * 
  */
 app.directive("carousel", function() {
-	return {
-        restrict: 'E',
+	return { 
+		restrict: 'E',
+		replace: true,
         templateUrl: "src/views/carousel.html", 
         controller: function($scope, contentful) {
             contentful
                     // Query Contentful for 'banner' objects.
 					.entries('content_type=banner').then(
 						function (response) {
+							console.log(response.data.items[0]);
 							if (response.data && response.data.items && response.data.items.length > 0) {
 								$scope.banners = response.data.items;
 							}
