@@ -1,70 +1,66 @@
 <!-- Content section -->
-<section class="py-5">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7 ">
-				<h1>{{product.title}}
-					<span class="badge badge-primary mx-3">Featured</span>
-				</h1>
-				<p class="lead py-2">{{product.descriptionShort}}</p>
-				<p class="py-2" marked="product.descriptionLong"></p>
+<div class="container py-5">
+	<div class="row">
+		<div class="col-md-7 ">
+			<h1>{{product.title}}
+				<span class="badge badge-primary mx-3">Featured</span>
+			</h1>
+			<p class="lead py-2">{{product.descriptionShort}}</p>
+			<p class="py-2" marked="product.descriptionLong"></p>
+			<h1 class="py-2" ng-if="product.relatedProducts.length > 0">Related Products</h1>
 
-				<h1 class="py-2" ng-if="product.relatedProducts.length > 0">Related Products</h1>
-
-				<div class="row py-4">
-					<div class="col-lg-6" ng-repeat="product in product.relatedProducts | limitTo:2">
-						<div class="card h-100">
-							<a href="#">
-								<img class="card-img-top" ng-src="{{ product.fields.image.fields.file.url }}">
-							</a>
-							<div class="card-body">
-								<h4 class="card-title">
-									<a ui-sref="singleProduct({ product : product.fields.urlSlug })">{{ product.fields.title }}</a>
-								</h4>
-								<p class="card-text">{{ product.fields.descriptionShort }}</p>
-							</div>
-							<div class="card-footer">
-								<small>Starting from
-									<strong>${{ product.fields.cost }}</strong>
-								</small>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-			</div>
-			<div class="col-md-4 offset-md-1 py-5">
-				<div class="card" style="width: 20rem;">
-					<img ng-src="{{ product.image.fields.file.url }}" class="img-fluid card-img">
-
-					<div class="card-body">
-						<h4 class="card-title">Purchase ${{product.cost}}</h4>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<button type="button" class="btn btn-success px-md-3">
-							<i class="fa fa-shopping-cart px-md-2" aria-hidden="true"></i> Buy
-						</button>
-
-						<div class="pt-4">
-							<i class="fa fa-2x fa-cc-visa" aria-hidden="true"></i>
-							<i class="fa fa-2x fa-cc-amex" aria-hidden="true"></i>
-							<i class="fa fa-2x fa-cc-mastercard" aria-hidden="true"></i>
-							<i class="fa fa-2x fa-cc-paypal" aria-hidden="true"></i>
-							<i class="fa fa-2x fa-cc-stripe" aria-hidden="true"></i>
-						</div>
-					</div>
-
-					<div ng-if="product.additionalProducts && product.additionalProducts.length > 0">
-						<img ng-src="{{ product.additionalProducts[0].fields.image.fields.file.url }}" class="img-fluid card-img py-2">
+			<div class="row py-4">
+				<div class="col-lg-6" ng-repeat="product in product.relatedProducts | limitTo:2">
+					<div class="card h-100">
+						<a href="#">
+							<img class="card-img-top" ng-src="{{ product.fields.image.fields.file.url }}">
+						</a>
 						<div class="card-body">
-							<h4 class="card-title">Special Offer</h4>
-							<p>As a part time offer, purchase a {{product.title}} and receive a free
-								<a ui-sref="singleProduct({ product : product.additionalProducts[0].fields.urlSlug })" href="#">{{product.additionalProducts[0].fields.title}}</a>
-							</p>
+							<h4 class="card-title">
+								<a ui-sref="singleProduct({ product : product.fields.urlSlug })">{{ product.fields.title }}</a>
+							</h4>
+							<p class="card-text">{{ product.fields.descriptionShort }}</p>
+						</div>
+						<div class="card-footer">
+							<small>Starting from
+								<strong>${{ product.fields.cost }}</strong>
+							</small>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<div class="col-md-4 offset-md-1 py-5">
+			<div class="card" style="width: 20rem;">
+				<img ng-src="{{ product.image.fields.file.url }}" class="img-fluid card-img">
+
+				<div class="card-body">
+					<h4 class="card-title">Purchase ${{product.cost}}</h4>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<button type="button" class="btn btn-success px-md-3">
+						<i class="fa fa-shopping-cart px-md-2" aria-hidden="true"></i> Buy
+					</button>
+
+					<div class="pt-4">
+						<i class="fa fa-2x fa-cc-visa" aria-hidden="true"></i>
+						<i class="fa fa-2x fa-cc-amex" aria-hidden="true"></i>
+						<i class="fa fa-2x fa-cc-mastercard" aria-hidden="true"></i>
+						<i class="fa fa-2x fa-cc-paypal" aria-hidden="true"></i>
+						<i class="fa fa-2x fa-cc-stripe" aria-hidden="true"></i>
+					</div>
+				</div>
+
+				<div ng-if="product.additionalProducts && product.additionalProducts.length > 0">
+					<img ng-src="{{ product.additionalProducts[0].fields.image.fields.file.url }}" class="img-fluid card-img py-2">
+					<div class="card-body">
+						<h4 class="card-title">Special Offer</h4>
+						<p>As a part time offer, purchase a {{product.title}} and receive a free
+							<a ui-sref="singleProduct({ product : product.additionalProducts[0].fields.urlSlug })" href="#">{{product.additionalProducts[0].fields.title}}</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</section>
+</div>

@@ -14,27 +14,13 @@ var gulp = require("gulp"),
 	connect = require("gulp-connect");
 	sass = require('gulp-sass');
 
-
 var pkg = require("./package.json"),
+	cssFile = "index.css", // CSS page name
+	root = ".", // index page path
+	pages = [ "index" ]; // list all pages
 
-	// CSS page name
-	cssFile = "index.css",
-
-	// index page path
-	root = ".",
-
-	// list all pages
-	pages = [
-		"index"
-	];
-
-var banner = [
-		"/* " + pkg.name + " v" + pkg.version + " " + dateformat(new Date(), "yyyy-mm-dd"),
-		" * " + pkg.homepage,
-		" * License: " + pkg.license,
-		" */\n\n"
-	].join("\n"),
-
+// Variable Definitions
+var banner = [ "/* " + pkg.name + " v" + pkg.version + " " + dateformat(new Date(), "yyyy-mm-dd"), " * " + pkg.homepage, " * License: " + pkg.license, " */\n\n" ].join("\n"),
 	paths = {
 		"tmpl": [root+"/src/**/*.html"],
 		"js": ["!**/*.tmp.js", "!**/*.test.js", "!"+root+"/src/**/*.min.js", root+"/src/**/*.js"],
@@ -42,26 +28,9 @@ var banner = [
 	},
 	ngModule = pkg.name;
 
-// generate path of pages
-pages.forEach(function(page) {
-	var name = page + ".src.html";
-	paths[name] = paths[name] || [];
-	paths[name].push(root + "/" + name);
-
-	name = page + ".html";
-	paths[name] = paths[name] || [];
-	paths[name].push(root + "/" + name);
-});
-
-gulp.task("build", sync.sync([
-	// Build resources
-	["css", "js", "tmpl", "bower.json"],
-
-	// Build page sources
-	pages.map(function(page) { return page + ".src.html"; }),
-
-	// Build release pages
-	pages.map(function(page) { return page + ".html"; })
+gulp.task("build", sync.sync([ ["css", "js", "tmpl", "bower.json"], 
+	pages.map(function(page) { return page + ".src.html"; }), // Build page sources
+	pages.map(function(page) { return page + ".html"; }) // Build release pages
 ]));
 
 // Default Task - Build & Watch
@@ -71,7 +40,7 @@ gulp.task("default", sync.sync([ ["build"], ["watch"] ]));
 gulp.task("dev", ["watch"]);
 
 // gulp up (update npm & bower)
-gulp.task("up", ["update-npm", "update-bower"]);
+gulp.task("update", ["update-npm", "update-bower"]);
 
 // gulp CSS (compile sass, concat into single file and reload)
 gulp.task("css", function(done) {
@@ -89,8 +58,7 @@ gulp.task("js", function(done) {
 		.on("end", done);
 });
 
-// gulp tmpl 
-// All angular templates get put into a template cache 
+// gulp tmpl (build the template cache)
 gulp.task("tmpl", function(done) {
 	gulp.src(paths.tmpl)
 		.pipe(templatecache("angular-template.tmp.js", {
@@ -102,6 +70,7 @@ gulp.task("tmpl", function(done) {
 		.on("end", done);
 });
 
+// Watch the files for changes
 gulp.task("watch", function() { ["tmpl", "css", "js"]
 		.concat(pages.map(function(page) { return page + ".src.html"; }))
 		.forEach(function(i) {
@@ -124,6 +93,41 @@ gulp.task("watch", function() { ["tmpl", "css", "js"]
 	});
 });
 
+gulp.task("bower.json", function(done) {
+	gulp.src(["bower.json"])
+		.pipe(replace(/"name": "[^"]*"/, "\"name\": \"" + pkg.name + "\""))
+		.pipe(gulp.dest("./"))
+		.on("end", done);
+});
+
+gulp.task("update-npm", function(done) {
+	var cmd = "sh -c './node_modules/npm-check-updates/bin/npm-check-updates -u'";
+	run(cmd).exec().on("end", done);
+});
+
+gulp.task("update-bower", function(done) {
+	var bowerjson = require("./bower.json");
+	var deps = [];
+	var i, cmd;
+
+	for (i in bowerjson.dependencies) {
+		deps.push(i);
+	}
+
+	cmd = "bower install --save --force-latest " + deps.join(" ");
+	run(cmd).exec().on("end", done);
+});	
+
+// generate path of pages
+pages.forEach(function(page) {
+	var name = page + ".src.html";
+	paths[name] = paths[name] || [];
+	paths[name].push(root + "/" + name);
+
+	name = page + ".html";
+	paths[name] = paths[name] || [];
+	paths[name].push(root + "/" + name);
+});
 
 // generate task of pages
 pages.forEach(function(page) {
@@ -162,29 +166,4 @@ pages.forEach(function(page) {
 				.on("end", done);
 		});
 	})(page);
-});
-
-gulp.task("bower.json", function(done) {
-	gulp.src(["bower.json"])
-		.pipe(replace(/"name": "[^"]*"/, "\"name\": \"" + pkg.name + "\""))
-		.pipe(gulp.dest("./"))
-		.on("end", done);
-});
-
-gulp.task("update-npm", function(done) {
-	var cmd = "sh -c './node_modules/npm-check-updates/bin/npm-check-updates -u'";
-	run(cmd).exec().on("end", done);
-});
-
-gulp.task("update-bower", function(done) {
-	var bowerjson = require("./bower.json");
-	var deps = [];
-	var i, cmd;
-
-	for (i in bowerjson.dependencies) {
-		deps.push(i);
-	}
-
-	cmd = "bower install --save --force-latest " + deps.join(" ");
-	run(cmd).exec().on("end", done);
 });

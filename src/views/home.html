@@ -1,61 +1,54 @@
 <!-- Content section -->
-<section class="py-5">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7">
-				<h1>Section Heading</h1>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi
-					officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
-			</div>
-			<div class="col-md-4 offset-md-1" contentful-entries="'content_type=event&limit=5&order=fields.date'">
-				<h4>Recently Opened Stores</h4>
-				<ul class="list-group py-4"> 
-					<li class="list-group-item" ng-repeat="store in $contentfulEntries.items">
-						<a ui-sref="location({ locationTitle : store.fields.urlSlug })">{{ store.fields.title }}</a>
-						<span class="pull-right small">{{ store.fields.date | date:'mediumDate' }}</span>
-					</li>
-				</ul>
-			</div>
+<div class="container py-5">
+	<div class="row">
+		<div class="col-md-7">
+			<h1>Learn how to get started</h1>
+			<p class="lead">Download the project and get started building</p>
+			<p>The starter kit is a starting point for building AngularJS applications which consume content from Contentful built on Bootstrap 4, Gulp, Bower & some of my other preferred tools. </p>
+			<p>Please consult the repositories readme file for documentation & support.</p>
 		</div>
-
-	</div>
-</section>
-
-<div contentful-entries="'content_type=productLine'">
-	<div class="container">
-		<div class="row py-5" ng-repeat="productLine in $contentfulEntries.items">
-			<div class="col-md-7 ">
-				<h2><a ui-sref="products({ productLine : productLine.fields.urlSlug })">{{productLine.fields.title}}</a> ({{productLine.fields.products.length}})</h2>
-				<p class="lead py-2">{{productLine.fields.descriptionShort}}</p>
-
-				<featured-products products="productLine.fields.products"></featured-products>
-			</div>
-			<div class="col-md-4 offset-md-1">
-				<a ui-sref="products"><img class="featurette-image img-fluid mx-auto img-thumbnail"  ng-src="{{productLine.fields.image.fields.file.url}}" ></a>
-			</div>
+		<div class="col-md-4 offset-md-1" >
+			<h4>Recently Opened Stores</h4>
+			<ul class="list-group py-4"> 
+				<li class="list-group-item" ng-repeat="store in stores">
+					<a ui-sref="location({ locationTitle : store.fields.urlSlug })">{{ store.fields.title }}</a>
+					<span class="pull-right small">{{ store.fields.date | date:'mediumDate' }}</span>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>
 
-<div class="py-2" contentful-entries="'content_type=blogArticle&limit=3&order=-sys.updatedAt'">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h1>Behind the Scenes</h1>
-			</div>
+<!-- Render out the featured products on the homepage -->
+<div class="container">
+	<div class="row py-5" ng-repeat="productLine in productLines">
+		<div class="col-md-7 ">
+			<h2><a ui-sref="products({ productLine : productLine.fields.urlSlug })">{{productLine.fields.title}}</a> ({{productLine.fields.products.length}})</h2>
+			<p class="lead py-2">{{productLine.fields.descriptionShort}}</p>
 
-			<div class="col-lg-4 col-md-6 mb-4 py-4" ng-repeat="article in $contentfulEntries.items">
-				<div class="card h-100">
-					<a href="#">
-						<img class="card-img-top" ng-src="{{ article.fields.image.fields.file.url }}" alt=""> 
-					</a>
-					<div class="card-body">
-						<h4 class="card-title">
-							<a ui-sref="article({ articleTitle: article.fields.urlSlug })">{{ article.fields.title }}</a>
-						</h4>
-						<p class="card-text">{{ article.fields.shortBody }}</p>
-					</div>
+			<featured-products products="productLine.fields.products"></featured-products>
+		</div>
+		<div class="col-md-4 offset-md-1">
+			<a ui-sref="products"><img class="featurette-image img-fluid mx-auto img-thumbnail"  ng-src="{{productLine.fields.image.fields.file.url}}" ></a>
+		</div>
+	</div>
+</div>
+
+<!-- Blog Articles rendered at the bottom of the homepage -->
+<div class="container py-2">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>Behind the Scenes</h1>
+		</div>
+
+		<div class="col-lg-4 col-md-6 mb-4 py-4" ng-repeat="article in articles">
+			<div class="card h-100">
+				<a href="#"> <img class="card-img-top" ng-src="{{ article.fields.image.fields.file.url }}" alt=""> </a>
+				<div class="card-body">
+					<h4 class="card-title">
+						<a ui-sref="article({ articleTitle: article.fields.urlSlug })">{{ article.fields.title }}</a>
+					</h4>
+					<p class="card-text">{{ article.fields.shortBody }}</p>
 				</div>
 			</div>
 		</div>

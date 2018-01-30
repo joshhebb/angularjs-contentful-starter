@@ -1,5 +1,5 @@
 /**
- * Carousel.js
+ * carousel.js
  * 
  * Query banner objects to be rendered in the carousel with content from Contentful.
  * @Author Josh Hebb
