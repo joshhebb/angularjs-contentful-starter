@@ -13,6 +13,12 @@ The project is a quick starter for AngularJS applications consuming content from
 * Build quickly with some preferred npm packages including gulp, bower & more
 * Watch your changes reload in real time with livereload
 
+### Demo
+
+You can find a demo of the site hosted here:
+
+* [Demo AngularJS Apple Store](http://whobrokethebuild.me/wp-content/uploads/angular-contentful-starter/index.html#!/)
+
 ### Prerequisite tools
 
 * [Node](https://nodejs.org/en/download/) (npm)
