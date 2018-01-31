@@ -15,7 +15,6 @@ app.directive("carousel", function() {
                     // Query Contentful for 'banner' objects.
 					.entries('content_type=banner').then(
 						function (response) {
-							console.log(response.data.items[0]);
 							if (response.data && response.data.items && response.data.items.length > 0) {
 								$scope.banners = response.data.items;
 							}

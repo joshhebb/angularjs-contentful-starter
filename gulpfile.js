@@ -29,7 +29,7 @@ var banner = [ "/* " + pkg.name + " v" + pkg.version + " " + dateformat(new Date
 	ngModule = pkg.name;
 
 gulp.task("build", sync.sync([ ["css", "js", "tmpl", "bower.json"], 
-	pages.map(function(page) { return page + ".src.html"; }), // Build page sources
+	pages.map(function(page) { return page + ".dev.html"; }), // Build page sources
 	pages.map(function(page) { return page + ".html"; }) // Build release pages
 ]));
 
@@ -72,7 +72,7 @@ gulp.task("tmpl", function(done) {
 
 // Watch the files for changes
 gulp.task("watch", function() { ["tmpl", "css", "js"]
-		.concat(pages.map(function(page) { return page + ".src.html"; }))
+		.concat(pages.map(function(page) { return page + ".dev.html"; }))
 		.forEach(function(i) {
 			gulp.watch(paths[i], function(i) {
 				return function() {
@@ -120,7 +120,7 @@ gulp.task("update-bower", function(done) {
 
 // generate path of pages
 pages.forEach(function(page) {
-	var name = page + ".src.html";
+	var name = page + ".dev.html";
 	paths[name] = paths[name] || [];
 	paths[name].push(root + "/" + name);
 
@@ -132,7 +132,7 @@ pages.forEach(function(page) {
 // generate task of pages
 pages.forEach(function(page) {
 	(function(page) {
-		var name = page + ".src.html";
+		var name = page + ".dev.html";
 		gulp.task(name, function(done) {
 			gulp.src(paths[name])
 				.pipe(rename({ basename: page }))
