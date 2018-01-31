@@ -2,6 +2,9 @@
 
 The project is a quick starter for AngularJS applications consuming content from Contentful, a content as a service provider.
 
+<img src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg" width="225" style="margin-left: 20px;" /><img src="https://angular.io/assets/images/logos/angular/angular.png" width="80" /><img src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" width="60" />
+
+
 ### Features
 
 * AngularJS application running on JS only - no compiling!
@@ -80,6 +83,10 @@ Some things to know:
 * The other page index.html which would be used in production is only built when you run gulp build
 * Index.html is built from index.dev.html so **always make your edits in index.dev.html**
 * The production pages and resources will be minified by gulp
+
+
+<img src="http://whobrokethebuild.me/wp-content/uploads/images/angular-contentful-starter.gif" />
+
 
 
 ### Adding AngularJS Libraries
