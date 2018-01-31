@@ -23,10 +23,10 @@
     "Josh Hebb <jfhebb@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "https://bitbucket.org/jfhebb/angular-contentful-starter",
+  "homepage": "https://github.com/joshhebb/angularjs-contentful-starter",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/jfhebb/angular-contentful-starter"
+    "url": "https://github.com/joshhebb/angularjs-contentful-starter"
   },
   "scripts": {
     "init": "npm install && bower install && gulp build"
