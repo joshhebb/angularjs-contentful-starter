@@ -1,6 +1,7 @@
 /**
  * AngularJS Starter Kit
  * @author Josh Hebb
+ * https://github.com/joshhebb/angularjs-contentful-starter
  * 
  */
 
@@ -10,18 +11,19 @@ var app = angular.module("angular-contentful-starter", [
   "contentful",
   "ngMap",
   "ngSanitize",
-  "hc.marked"
+  "hc.marked",
+  "contentfulConfig"
 ]);
 
 // Configure Contentful with the space ID & API access token so we can query Contentful.
-app.config(function(contentfulProvider){
+app.config([ 'contentfulProvider', 'contentfulConfig', function(contentfulProvider, contentfulConfig){
 
   // You can get your option values from Contentful (https://www.contentful.com/developers/docs/references/authentication/)
   contentfulProvider.setOptions({
-      space: 'hpty8kufn7nl',
-      accessToken: '3cdfdbcbd12558162e4f8a4105674661f02f8c26afa9e8423e29703e8915427e'
+      space: contentfulConfig.spaceId,
+      accessToken: contentfulConfig.managementToken
   });
-});
+}]);
 
 // Setup the marked provider for rendering Markdown.
 app.config(['markedProvider', function (markedProvider) {

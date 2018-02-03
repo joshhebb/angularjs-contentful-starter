@@ -11,8 +11,10 @@ var gulp = require("gulp"),
 	minifyHtml = require("gulp-minify-html"),
 	replace = require("gulp-replace"),
 	run = require("gulp-run"),
-	connect = require("gulp-connect");
-	sass = require('gulp-sass');
+	connect = require("gulp-connect"),
+	sass = require('gulp-sass'),
+	gulpNgConfig = require('gulp-ng-config');
+
 
 var pkg = require("./package.json"),
 	cssFile = "index.css", // CSS page name
@@ -28,7 +30,7 @@ var banner = [ "/* " + pkg.name + " v" + pkg.version + " " + dateformat(new Date
 	},
 	ngModule = pkg.name;
 
-gulp.task("build", sync.sync([ ["css", "js", "tmpl", "bower.json"], 
+gulp.task("build", sync.sync([ ["css", "js", "tmpl", "bower.json", "generateConfig"], 
 	pages.map(function(page) { return page + ".dev.html"; }), // Build page sources
 	pages.map(function(page) { return page + ".html"; }) // Build release pages
 ]));
@@ -72,20 +74,22 @@ gulp.task("tmpl", function(done) {
 
 // Watch the files for changes
 gulp.task("watch", function() { ["tmpl", "css", "js"]
-		.concat(pages.map(function(page) { return page + ".dev.html"; }))
-		.forEach(function(i) {
-			gulp.watch(paths[i], function(i) {
-				return function() {
-					gulp.src(paths['css'])
-						.pipe(sass())
-						.pipe(concat(cssFile))
-						.pipe(gulp.dest(root+"/src/"));
-						
-					gulp.src(paths[i])
-						.pipe(connect.reload());
-				};
-			}(i));
-		});
+	.concat(pages.map(function(page) { return page + ".dev.html"; }))
+	.forEach(function(i) {
+		gulp.watch(paths[i], function(i) {
+			return function() {
+				gulp.src(paths['css'])
+					.pipe(sass())
+					.pipe(concat(cssFile))
+					.pipe(gulp.dest(root+"/src/"));
+					
+				gulp.src(paths[i])
+					.pipe(connect.reload());
+			};
+		}(i));
+	});
+
+	// Start LiveReload
 	connect.server({
 		root: root,
 		port: 9000,
@@ -99,6 +103,15 @@ gulp.task("bower.json", function(done) {
 		.pipe(gulp.dest("./"))
 		.on("end", done);
 });
+
+gulp.task('generate-config', function () {
+	gulp.src('package.json')
+	.pipe(gulpNgConfig('contentfulConfig', { environment: 'config.contentfulConfigurations' }))
+	.pipe(concat('contentful-config.js'))
+	.pipe(gulp.dest('src/config/'));
+});
+
+
 
 gulp.task("update-npm", function(done) {
 	var cmd = "sh -c './node_modules/npm-check-updates/bin/npm-check-updates -u'";

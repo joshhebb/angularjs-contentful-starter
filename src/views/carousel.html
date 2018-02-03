@@ -5,11 +5,7 @@
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item" ng-repeat="banner in banners" ng-class="{ active : $first }" 
                 ng-style="{ 'background-image': 'linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(' + banner.fields.backgroundImage.fields.file.url + ')' }">
-
-                <div class="carousel-caption d-none d-md-block text-left offset-md-1">
-                    <h3 class="display-5">{{ banner.fields.title }}</h3>
-                    <h5>{{ banner.fields.bannerText }}</h5>
-                </div>
+ 
             </div>
         </div>
 
