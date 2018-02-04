@@ -38,7 +38,7 @@ git clone https://github.com/joshhebb/angularjs-contentful-starter.git your-proj
 cd your-project-name-here
 npm install -g gulp               # Install Gulp (global)
 npm install -g bower              # Install Bower (global)
-npm run init                      # Run init task to install the node modules, libraries and then call gulp to build the app
+npm run init                      # Run init task to install the node modules, libraries and then call gulp to build the app.
 ```
 
 If everything goes okay, you will have imported the content model into your space and built the project. You're now ready to start development!

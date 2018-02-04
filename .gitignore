@@ -8,3 +8,4 @@
 /lib/**/Gruntfile*
 /lib/**/Makefile*
 *.tmp.js
+.vscode
