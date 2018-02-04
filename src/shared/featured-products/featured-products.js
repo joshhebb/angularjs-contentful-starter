@@ -5,13 +5,13 @@
  * @Author Josh Hebb
  * 
  */
-app.directive("featuredProducts", function() {
+angular.module("angular-contentful-starter").directive("featuredProducts", function() {
 	return {
         restrict: 'E',
         replace: true,
         scope: {
             products: '='
         },
-        templateUrl: "src/views/featured-products.html"
+        templateUrl: "src/shared/featured-products/featured-products.html"
     }
 });

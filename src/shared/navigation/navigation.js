@@ -5,10 +5,10 @@
  * @Author Josh Hebb
  * 
  */
-app.directive("navigation", function() {
+angular.module("angular-contentful-starter").directive("navigation", function() {
 	return {
         restrict: 'E',
         replace: true,
-        templateUrl: "src/views/navigation.html"
+        templateUrl: "src/shared/navigation/navigation.html"
     }
 }); 
