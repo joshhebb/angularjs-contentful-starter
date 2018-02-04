@@ -30,7 +30,7 @@ var banner = [ "/* " + pkg.name + " v" + pkg.version + " " + dateformat(new Date
 	},
 	ngModule = pkg.name;
 
-gulp.task("build", sync.sync([ ["css", "js", "tmpl", "bower.json", "generateConfig"], 
+gulp.task("build", sync.sync([ ["css", "js", "tmpl", "bower.json", "generate-config"], 
 	pages.map(function(page) { return page + ".dev.html"; }), // Build page sources
 	pages.map(function(page) { return page + ".html"; }) // Build release pages
 ]));
@@ -104,13 +104,16 @@ gulp.task("bower.json", function(done) {
 		.on("end", done);
 });
 
+// Generate contentful-config.js from package.json configurations for use in angularJS.
 gulp.task('generate-config', function () {
 	gulp.src('package.json')
-	.pipe(gulpNgConfig('contentfulConfig', { environment: 'config.contentfulConfigurations' }))
+	.pipe(gulpNgConfig('angular-contentful-starter', { 
+		environment: 'config.contentfulConfigurations',
+		createModule: false 
+	}))
 	.pipe(concat('contentful-config.js'))
 	.pipe(gulp.dest('src/config/'));
 });
-
 
 
 gulp.task("update-npm", function(done) {

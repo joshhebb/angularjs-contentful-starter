@@ -5,11 +5,11 @@
  * @Author Josh Hebb
  * 
  */
-app.directive("carousel", function() {
+angular.module("angular-contentful-starter").directive("carousel", function() {
 	return { 
 		restrict: 'E',
 		replace: true,
-        templateUrl: "src/views/carousel.html", 
+        templateUrl: "src/shared/carousel/carousel.html", 
         controller: function($scope, contentful) {
             contentful
                     // Query Contentful for 'banner' objects.

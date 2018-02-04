@@ -35,18 +35,14 @@
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYUxfnjxus1rXx-ntGcxqWD1BPRZrI1IM" type="text/javascript"></script>
 
 	<!-- build:js public/index.min.js -->
+	
+	<!-- AngularJS -->
 	<script src="lib/angular/angular.js"></script>
-	<script src="src/config/app.js"></script>
-	<script src="src/directives/carousel.js"></script>
-	<script src="src/directives/navigation.js"></script>
-	<script src="src/directives/footer.js"></script>
-	<script src="src/directives/featured-products.js"></script>
-	<script src="src/config/route.js"></script>
 
 	<!-- Core Angular Libraries -->
+	<script src="lib/angular-contentful/dist/angular-contentful.js"></script>
 	<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
-	<script src="lib/angular-contentful/dist/angular-contentful.min.js"></script>
-	
+
 	<!-- Angular Maps Library -->
 	<script src="lib/ngmap/build/scripts/ng-map.min.js"></script>
 
@@ -55,6 +51,15 @@
 	<script src="lib/marked/lib/marked.js"></script>
 	<script src="lib/angular-marked/dist/angular-marked.js"></script>
 
+	<!-- Custom App Files -->
+	<script src="src/app.js"></script>
+	<script src="src/shared/carousel/carousel.js"></script>
+	<script src="src/shared/navigation/navigation.js"></script>
+	<script src="src/shared/footer/footer.js"></script>
+	<script src="src/shared/featured-products/featured-products.js"></script>
+	<script src="src/config/contentful-config.js"></script>
+	<script src="src/route.js"></script>
+	
 	<!-- Bootstrap Scripts -->
 	<script src="lib/jquery/dist/jquery.min.js"></script>
 	<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>

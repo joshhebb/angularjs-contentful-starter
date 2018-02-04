@@ -5,10 +5,10 @@
  * @Author Josh Hebb
  * 
  */
-app.directive("footerSection", function() {
+angular.module("angular-contentful-starter").directive("footerSection", function() {
 	return {
         restrict: 'E',
         replace: true,
-        templateUrl: "src/views/footer.html"
+        templateUrl: "src/shared/footer/footer.html"
     }
 });

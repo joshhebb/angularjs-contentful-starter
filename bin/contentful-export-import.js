@@ -1,4 +1,8 @@
-// Imports
+/**
+ * Node.js script which exports the 'Sample' Contentful space and uploads it into the users specified space.
+ * @author Josh Hebb
+ */
+
 var prompt = require('prompt');
 var spaceExport = require('contentful-export');
 var spaceImport = require('contentful-import');
@@ -7,7 +11,7 @@ var updateJson = require('update-json');
 // Contentful Export & Import Options
 var options = {
   spaceId: 'hpty8kufn7nl',
-  managementToken: '6df4dff3fe45d44c7081be038af56a91ff8e9490c69c7649701fcf28eeb547e4',
+  managementToken: '8fa7f1194e1440f869e193c2cab5e8da3e009f242046785b86f9aa054dfff744',
   saveFile: false,
   maxAllowedItems: 100
 }
@@ -70,6 +74,6 @@ prompt.get(schema, function (err, result) {
         })
     })
     .catch((err) => {
-      console.log('Uh oh! Something went wrong:', err)
+      console.log('Uh oh! Something went wrong: ', err)
     })
 });
