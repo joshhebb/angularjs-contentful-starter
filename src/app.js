@@ -23,11 +23,11 @@ var app = angular.module("angular-contentful-starter", [
  * The values for the space ID and management token come from contentful-config.js which is created when you created the project
  * via 'npm run init'. Update the values in package.json for them to persist through builds.
  */
-angular.module("angular-contentful-starter").config(['contentfulProvider', 'spaceId', 'managementToken', 
-function(contentfulProvider, spaceId, managementToken){
+angular.module("angular-contentful-starter").config(['contentfulProvider', 'spaceId', 'accessToken', 
+function(contentfulProvider, spaceId, accessToken){
   contentfulProvider.setOptions({
       space: spaceId,
-      accessToken: managementToken
+      accessToken: accessToken
   });
 }]);
 

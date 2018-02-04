@@ -11,7 +11,8 @@ var updateJson = require('update-json');
 // Contentful Export & Import Options
 var options = {
   spaceId: 'hpty8kufn7nl',
-  managementToken: '8fa7f1194e1440f869e193c2cab5e8da3e009f242046785b86f9aa054dfff744',
+  accessToken: '',
+  managementToken: 'CFPAT-faf804d0d0abc11ef6c5844ef15ffbf8f467a3236ccccd5a3b7af618f0fc3ad2',
   saveFile: false,
   maxAllowedItems: 100
 }
@@ -22,11 +23,15 @@ var filePath = './package.json';
 // Contentful options parameter definitions.
 var schema = {
   properties: {
-    // Contentful Space ID
+    // Your personal Space ID
     spaceId: {
       required: true
     },
-    // Contentful Token
+    // Content Delivery Access Token
+    accessToken: {
+      required: true
+    },
+    // Content Management Token
     managementToken: {
       required: true
     }
@@ -37,8 +42,9 @@ var schema = {
 var data = { 
   config: {
     contentfulConfigurations: {
-      spaceId: options.spaceId,
-      managementToken: options.managementToken
+      spaceId: '',
+      accessToken: '',
+      managementToken: ''
     }
   }
 }
@@ -46,7 +52,7 @@ var data = {
 
 prompt.start();
 console.log("Starting the Contentful Export & Import Process..");
-console.log("Please enter your Contentful Space ID & Management Token.");
+console.log("Please enter your Contentful Space ID and your Content Delivery / Management Tokens.");
 console.log("You can find those values in Contentful under your space.");
 console.log("---------------------------------------------------------");
 
@@ -58,11 +64,20 @@ prompt.get(schema, function (err, result) {
       // Update the options with the output JSON from the export and the user input spaceId & management token.
       options.content = output;
       options.spaceId = result.spaceId;
+      options.accessToken = result.accessToken;
       options.managementToken = result.managementToken;
 
+      // Import the Space and pass the input into update JSON to update the package.json configs.
       spaceImport(options)
         .then((output) => {
           console.log('Data Imported successfully');
+
+          // Set the JSON values entered by the user to update package.json
+          data.config.contentfulConfigurations.spaceId = options.spaceId;
+          data.config.contentfulConfigurations.accessToken = options.accessToken;
+          data.config.contentfulConfigurations.managementToken = options.managementToken;
+
+          // Update package.json
           updateJson(filePath, data, function (error) {
             if (error) {
               console.log("An error occurred updating package.json: " + err);
