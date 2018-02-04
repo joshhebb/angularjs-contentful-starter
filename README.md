@@ -31,7 +31,16 @@ and npm is simply a node package which is a package manage in itself. It allows 
 
 Just [fork](https://github.com/joshhebb/angularjs-contentful-starter) or pull down the repository and run the following commands.
 
-**Before you start** when you run the final step of this setup, you will be asked to enter your space ID and management API key from Contentful. If you haven't registered for a account [head over to Contentful](https://www.contentful.com/sign-up/#dev) and get started.
+**Before you start** when you run the final step of this setup, you will be asked to enter your space ID, delivery and management API keys from Contentful. If you haven't registered for a account [head over to Contentful](https://www.contentful.com/sign-up/#dev) and get started.
+
+The three pieces of info you need from Contentful:
+
+* Space ID : the identifier of your space which is your personal collection of models & content
+* Management API token : content management tokens
+* Personal access token : content delivery tokens
+
+Read more about the [authentication tokens on Contentful](https://www.contentful.com/developers/docs/references/authentication/).
+
 
 ```shell
 git clone https://github.com/joshhebb/angularjs-contentful-starter.git your-project-name-here
@@ -39,6 +48,17 @@ cd your-project-name-here
 npm install -g gulp               # Install Gulp (global)
 npm install -g bower              # Install Bower (global)
 npm run init                      # Run init task to install the node modules, libraries and then call gulp to build the app.
+
+Starting the Contentful Export & Import Process..
+Please enter your Contentful Space ID and your Content Delivery / Management Tokens.
+You can find those values in Contentful under your space.
+
+prompt: spaceId:  your-space-id
+prompt: accessToken:  your-content-delivery-access-token
+prompt: managementToken:  22 your-content-management-token
+
+# The models & content are then exported from the sample space and uploaded into the space you created.
+
 ```
 
 If everything goes okay, you will have imported the content model into your space and built the project. You're now ready to start development!
