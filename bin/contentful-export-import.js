@@ -38,12 +38,11 @@ var schema = {
 };
 
 // Configuration data that we'll inject into package.json
-var data = { 
+var data = {
   config: {
     contentfulConfigurations: {
       spaceId: '',
-      accessToken: '',
-      managementToken: ''
+      accessToken: ''
     }
   }
 }
@@ -55,7 +54,7 @@ console.log("Please enter your Contentful Space ID and your Content Delivery / M
 console.log("You can find those values in Contentful under your space.");
 console.log("---------------------------------------------------------");
 
-// Get two properties from the user: username and email 
+// Get two properties from the user: username and email
 prompt.get(schema, function (err, result) {
 
       var contentfulSpaceExport = require('./contentful-export.json');
@@ -74,7 +73,6 @@ prompt.get(schema, function (err, result) {
           // Set the JSON values entered by the user to update package.json
           data.config.contentfulConfigurations.spaceId = options.spaceId;
           data.config.contentfulConfigurations.accessToken = options.accessToken;
-          data.config.contentfulConfigurations.managementToken = options.managementToken;
 
           // Update package.json
           updateJson(filePath, data, function (error) {
