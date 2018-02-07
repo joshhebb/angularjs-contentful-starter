@@ -4,15 +4,14 @@
  */
 
 var prompt = require('prompt');
-var spaceExport = require('contentful-export');
 var spaceImport = require('contentful-import');
 var updateJson = require('update-json');
 
 // Contentful Export & Import Options
 var options = {
-  spaceId: 'hpty8kufn7nl',
+  spaceId: '',
   accessToken: '',
-  managementToken: 'CFPAT-faf804d0d0abc11ef6c5844ef15ffbf8f467a3236ccccd5a3b7af618f0fc3ad2',
+  managementToken: '',
   saveFile: false,
   maxAllowedItems: 100
 }
@@ -58,11 +57,11 @@ console.log("---------------------------------------------------------");
 
 // Get two properties from the user: username and email 
 prompt.get(schema, function (err, result) {
-  spaceExport(options)
-    .then((output) => {
+
+      var contentfulSpaceExport = require('./contentful-export.json');
 
       // Update the options with the output JSON from the export and the user input spaceId & management token.
-      options.content = output;
+      options.content = contentfulSpaceExport;
       options.spaceId = result.spaceId;
       options.accessToken = result.accessToken;
       options.managementToken = result.managementToken;
@@ -86,9 +85,5 @@ prompt.get(schema, function (err, result) {
         })
         .catch((err) => {
           console.log('Something went wrong with the import: ', err)
-        })
-    })
-    .catch((err) => {
-      console.log('Uh oh! Something went wrong: ', err)
-    })
+        });
 });

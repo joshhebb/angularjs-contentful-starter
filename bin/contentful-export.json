@@ -1,0 +1,4383 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "banner",
+        "type": "ContentType",
+        "createdAt": "2018-01-28T00:00:46.466Z",
+        "updatedAt": "2018-02-04T21:05:43.829Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 5,
+        "firstPublishedAt": "2018-01-28T00:00:46.699Z",
+        "publishedAt": "2018-02-04T21:05:43.829Z"
+      },
+      "displayField": "title",
+      "name": "Banner",
+      "description": "Banners for the top of the page.",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "bannerText",
+          "name": "Banner Text",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "backgroundImage",
+          "name": "Background Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "pageLink",
+          "name": "Page Link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-\\/]))?$"
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "blogArticle",
+        "type": "ContentType",
+        "createdAt": "2018-01-28T02:10:57.491Z",
+        "updatedAt": "2018-02-04T21:05:48.863Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 11,
+        "firstPublishedAt": "2018-01-28T02:10:57.893Z",
+        "publishedAt": "2018-02-04T21:05:48.863Z"
+      },
+      "displayField": "title",
+      "name": "Blog Article",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "urlSlug",
+          "name": "URL Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shortBody",
+          "name": "Short Body",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "longDescription",
+          "name": "Long Body",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "author",
+          "name": "Author",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "user"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "user",
+        "type": "ContentType",
+        "createdAt": "2018-01-28T03:07:03.275Z",
+        "updatedAt": "2018-02-04T21:05:47.765Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 5,
+        "firstPublishedAt": "2018-01-28T03:07:03.528Z",
+        "publishedAt": "2018-02-04T21:05:47.765Z"
+      },
+      "displayField": "firstName",
+      "name": "User",
+      "description": "",
+      "fields": [
+        {
+          "id": "firstName",
+          "name": "First Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "lastName",
+          "name": "Last Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "event",
+        "type": "ContentType",
+        "createdAt": "2018-01-28T03:31:30.152Z",
+        "updatedAt": "2018-02-04T21:05:47.067Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 12,
+        "version": 24,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 23,
+        "firstPublishedAt": "2018-01-28T03:31:30.434Z",
+        "publishedAt": "2018-02-04T21:05:47.066Z"
+      },
+      "displayField": "title",
+      "name": "Store",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subtitle",
+          "name": "Subtitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "urlSlug",
+          "name": "URL Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "location",
+          "name": "Location",
+          "type": "Location",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cost",
+          "name": "Cost",
+          "type": "Number",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "products",
+          "name": "Products",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "product"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "product",
+        "type": "ContentType",
+        "createdAt": "2018-01-28T19:06:33.715Z",
+        "updatedAt": "2018-02-04T21:05:46.565Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 17,
+        "firstPublishedAt": "2018-01-28T19:06:33.867Z",
+        "publishedAt": "2018-02-04T21:05:46.565Z"
+      },
+      "displayField": "title",
+      "name": "Product",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "urlSlug",
+          "name": "URL Slug",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cost",
+          "name": "Cost",
+          "type": "Number",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "descriptionShort",
+          "name": "Description (Short)",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "descriptionLong",
+          "name": "Description (Long)",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "youtubeEmbedUrl",
+          "name": "Youtube Embed URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "relatedProducts",
+          "name": "Related Products",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "product"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "additionalProducts",
+          "name": "Additional Products",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "product"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "productLine",
+        "type": "ContentType",
+        "createdAt": "2018-01-28T19:12:52.257Z",
+        "updatedAt": "2018-02-04T21:05:45.731Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 17,
+        "firstPublishedAt": "2018-01-28T19:12:52.420Z",
+        "publishedAt": "2018-02-04T21:05:45.730Z"
+      },
+      "displayField": "title",
+      "name": "Product Line",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "urlSlug",
+          "name": "URL Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "products",
+          "name": "Products",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "product"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "descriptionShort",
+          "name": "Description (Short)",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "testing",
+        "type": "ContentType",
+        "createdAt": "2018-01-31T04:11:37.107Z",
+        "updatedAt": "2018-02-04T21:05:44.567Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 7,
+        "firstPublishedAt": "2018-01-31T04:11:37.600Z",
+        "publishedAt": "2018-02-04T21:05:44.567Z"
+      },
+      "displayField": null,
+      "name": "Testing",
+      "description": "",
+      "fields": [
+        {
+          "id": "test",
+          "name": "Test",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hpty8kufn7nl",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2018-01-28T00:00:46.814Z",
+        "createdBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-02-04T21:05:49.880Z",
+        "updatedBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "banner",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "bannerText",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "backgroundImage",
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "pageLink",
+          "widgetId": "singleLine"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hpty8kufn7nl",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2018-01-28T02:10:58.008Z",
+        "createdBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-02-04T21:05:49.881Z",
+        "updatedBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "blogArticle",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "urlSlug",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "shortBody",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "longDescription",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "author",
+          "widgetId": "entryLinkEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hpty8kufn7nl",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2018-01-28T03:07:03.646Z",
+        "createdBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-02-04T21:05:50.480Z",
+        "updatedBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "user",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "firstName",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "lastName",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hpty8kufn7nl",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 24,
+        "createdAt": "2018-01-28T03:31:30.583Z",
+        "createdBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-02-04T21:05:50.110Z",
+        "updatedBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "event",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "subtitle",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "urlSlug",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker"
+        },
+        {
+          "fieldId": "location",
+          "widgetId": "locationEditor"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "cost",
+          "widgetId": "numberEditor"
+        },
+        {
+          "fieldId": "products",
+          "settings": {
+            "bulkEditing": false
+          },
+          "widgetId": "entryLinksEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hpty8kufn7nl",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 18,
+        "createdAt": "2018-01-28T19:06:33.978Z",
+        "createdBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-02-04T21:05:50.235Z",
+        "updatedBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "product",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "urlSlug",
+          "widgetId": "slugEditor"
+        },
+        {
+          "fieldId": "cost",
+          "widgetId": "numberEditor"
+        },
+        {
+          "fieldId": "descriptionShort",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "descriptionLong",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "youtubeEmbedUrl",
+          "widgetId": "urlEditor"
+        },
+        {
+          "fieldId": "relatedProducts",
+          "settings": {
+            "bulkEditing": true
+          },
+          "widgetId": "entryCardsEditor"
+        },
+        {
+          "fieldId": "additionalProducts",
+          "settings": {
+            "bulkEditing": true
+          },
+          "widgetId": "entryCardsEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hpty8kufn7nl",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 18,
+        "createdAt": "2018-01-28T19:12:52.540Z",
+        "createdBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-02-04T21:05:50.306Z",
+        "updatedBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "productLine",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "urlSlug",
+          "widgetId": "slugEditor"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "products",
+          "settings": {
+            "bulkEditing": true
+          },
+          "widgetId": "entryCardsEditor"
+        },
+        {
+          "fieldId": "descriptionShort",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "hpty8kufn7nl",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2018-01-31T04:11:37.754Z",
+        "createdBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-02-04T21:05:50.496Z",
+        "updatedBy": {
+          "sys": {
+            "id": "58JeMweewsYJ4ForTlW2zu",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "testing",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "test",
+          "widgetId": "objectEditor"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "iSgs6iZDmSmeUsoS8cGey",
+        "type": "Entry",
+        "createdAt": "2018-01-28T03:09:37.746Z",
+        "updatedAt": "2018-02-04T21:06:42.319Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 13,
+        "firstPublishedAt": "2018-01-28T03:12:52.996Z",
+        "publishedAt": "2018-02-04T21:06:42.319Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "user"
+          }
+        }
+      },
+      "fields": {
+        "firstName": {
+          "en-US": "Josh"
+        },
+        "lastName": {
+          "en-US": "Hebb"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "H0xlMkCqcu2eYWqIgSgwE"
+            }
+          }
+        },
+        "description": {
+          "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "3QPx9jayP6mcQW20KiKkSe",
+        "type": "Entry",
+        "createdAt": "2018-01-28T04:44:45.256Z",
+        "updatedAt": "2018-02-04T21:06:53.306Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 12,
+        "version": 191,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 190,
+        "firstPublishedAt": "2018-01-28T04:44:48.105Z",
+        "publishedAt": "2018-02-04T21:06:53.306Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "banner"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Welcome to the Apple Store"
+        },
+        "bannerText": {
+          "en-US": "This site is a demo for the AngularJS & Contentful Starter Kit"
+        },
+        "backgroundImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5qE0tvttniSUk42GQIykK"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "2cldhoCdN28cYm4WUW2uSs",
+        "type": "Entry",
+        "createdAt": "2018-01-28T19:30:37.080Z",
+        "updatedAt": "2018-02-04T21:06:52.552Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 66,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 65,
+        "firstPublishedAt": "2018-01-28T19:40:10.446Z",
+        "publishedAt": "2018-02-04T21:06:52.552Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Beats by Dr. Dre Studio Over-Ear Noise Cancelling "
+        },
+        "urlSlug": {
+          "en-US": "beats-by-dre-studio"
+        },
+        "cost": {
+          "en-US": 279.99
+        },
+        "descriptionShort": {
+          "en-US": "The Beats Studio wireless over-ear headphones are enhanced with Bluetooth technology so you can ditch the cable clutter. "
+        },
+        "descriptionLong": {
+          "en-US": "### More Information\n- Bluetooth technology gives you the convenience of wireless operation up to a 30-foot range\n- Take calls, control your tunes, and adjust the volume, right from the headphones\n- Sleek, lightweight, over-ear design keeps you comfortable even during extended listening sessions\n- ANC (Adaptive Noise Cancellation) comes in two modes to maximize your listening experience or put the world on mute\n- Beats Acoustic Engine provides precision sound, while DSP software helps generate the experience of live music through your headphones\n- Rechargeable battery offers up to 12 hours of wireless use and up to 20 hours when plugged into your audio device"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "sadsBqEvv2Q6KY6Cg2Wu8"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "3Sm2KC08NGkqUakE2kWesi",
+        "type": "Entry",
+        "createdAt": "2018-01-28T19:40:46.704Z",
+        "updatedAt": "2018-02-04T21:06:51.577Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 59,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 58,
+        "firstPublishedAt": "2018-01-28T19:41:58.650Z",
+        "publishedAt": "2018-02-04T21:06:51.577Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Beats by Dr. Dre Solo 3 On-Ear"
+        },
+        "urlSlug": {
+          "en-US": "beats-by-dre-solo-3"
+        },
+        "cost": {
+          "en-US": 229.99
+        },
+        "descriptionShort": {
+          "en-US": "An unforgettable listening experience awaits you with the Beats by Dr. Dre Solo3 wireless headphones. "
+        },
+        "descriptionLong": {
+          "en-US": "An unforgettable listening experience awaits you with the Beats by Dr. Dre Solo3 wireless headphones. Bluetooth connectivity lets you wirelessly stream music from your iOS devices and take hands-free calls with the built-in mic. Rechargeable battery offers 40 hours of use on a single charge, plus a 5-minute quick charge gives you 3 hours of playback.\n\n### More Information\n- On-ear headphones with fine-tuned acoustics deliver Beats signature sound that maximizes clarity, breadth, and balance\n- Class 1 Bluetooth allows you to wirelessly pair with your iPhone, iPad, Mac, or Apple Watch (requires iCloud account and macOS Sierra, iOS 10, or watchOS 3)\n- Multifunction on-ear controls let you take calls, play music, adjust volume and activate Siri\n- Built-in dual beam-forming mics deliver clear audio, so you know you'll be heard even when you're on the go\n- Cushioned, pivoting ear cups offer all-day listening comfort and are designed to keep out background noise for an immersive listening experience\n- Rechargeable battery provides 40 hours of use on a full charge and 3 hour of playback on a 5-minute Fast Fuel quick charge\n- Folding design makes these headphones ultra-portable and easy to store"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4apkpEpgQ8KUAQa6MKMgMI"
+            }
+          }
+        },
+        "relatedProducts": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2cldhoCdN28cYm4WUW2uSs"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "2blN319ptyGweooUO2muo2",
+        "type": "Entry",
+        "createdAt": "2018-01-28T19:43:40.759Z",
+        "updatedAt": "2018-02-04T21:06:43.340Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 33,
+        "firstPublishedAt": "2018-01-28T19:44:47.011Z",
+        "publishedAt": "2018-02-04T21:06:43.339Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Apple AirPods In-Ear Bluetooth Headphones"
+        },
+        "urlSlug": {
+          "en-US": "apple-airpods"
+        },
+        "cost": {
+          "en-US": 218.99
+        },
+        "descriptionShort": {
+          "en-US": "Wireless. Effortless. Magical.Introducing wireless AirPods. Just take them out and they’re ready to use with all your Apple devices."
+        },
+        "descriptionLong": {
+          "en-US": "### Overview\nWireless. Effortless. Magical.Introducing wireless AirPods. Just take them out and they’re ready to use with all your Apple devices.1 Put them in your ears and they connect instantly. Speak into them and your voice sounds clear. Simplicity and technology, together like never before.1Requires an iCloud account and macOS Sierra, iOS 10 or watchOS 3.\n\n### More Information\n- Designed by Apple\n- Automatically on, automatically connected\n- One-tap setup for all your Apple devices\n- Quick access to Siri with a double tap\n- More than 24-hour battery life with Charging Case\n- Charges quickly in the case\n- Rich, high-quality audio and voice\n- Seamless switching between devices\n- Driven by the custom Apple W1 chip\n- Up to 5 hours of listening time on one charge"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "29eb6oOh3SamygMS8woeCG"
+            }
+          }
+        },
+        "relatedProducts": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3Sm2KC08NGkqUakE2kWesi"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2cldhoCdN28cYm4WUW2uSs"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7uOXigjzZmkS6KWs8M4ME8"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "67xABGbk5iWkKESsa2W0Kw",
+        "type": "Entry",
+        "createdAt": "2018-01-28T19:47:11.004Z",
+        "updatedAt": "2018-02-04T21:06:50.909Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 30,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 29,
+        "firstPublishedAt": "2018-01-28T19:51:17.578Z",
+        "publishedAt": "2018-02-04T21:06:50.909Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "productLine"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Beats by Dr. Dre"
+        },
+        "urlSlug": {
+          "en-US": "beats-by-dre"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5ZeSe1gfHUKWQoY0K0SMw0"
+            }
+          }
+        },
+        "products": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2cldhoCdN28cYm4WUW2uSs"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3Sm2KC08NGkqUakE2kWesi"
+              }
+            }
+          ]
+        },
+        "descriptionShort": {
+          "en-US": "Through its family of premium consumer headphones, earphones and speakers, Beats has introduced an entirely new generation to the possibilities of premium sound entertainment. "
+        },
+        "description": {
+          "en-US": "Beats by Dr. Dre (Beats) is a leading audio brand founded in 2006 by Dr. Dre and Jimmy Iovine. Through its family of premium consumer headphones, earphones and speakers, Beats has introduced an entirely new generation to the possibilities of premium sound entertainment. The brand’s continued success helps bring the energy, emotion and excitement of playback in the recording studio back to the listening experience for music lovers worldwide. eats was acquired by Apple Inc. in July 2014."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "1Q0c7ffyZiKWSK2wQSuIM6",
+        "type": "Entry",
+        "createdAt": "2018-01-28T19:51:42.771Z",
+        "updatedAt": "2018-02-04T21:06:44.445Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 37,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 36,
+        "firstPublishedAt": "2018-01-28T19:58:37.953Z",
+        "publishedAt": "2018-02-04T21:06:44.445Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "productLine"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPhones"
+        },
+        "urlSlug": {
+          "en-US": "iphones"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "56pGIAuayc4UWyUui8EseI"
+            }
+          }
+        },
+        "products": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3r1mcGhP3qOGoGYQQkwcCW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1JUyiJQYaU8mikEqOakUYc"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7uOXigjzZmkS6KWs8M4ME8"
+              }
+            }
+          ]
+        },
+        "descriptionShort": {
+          "en-US": "Our vision has always been to create an iPhone that is entirely screen. One so immersive the device itself disappears into the experience."
+        },
+        "description": {
+          "en-US": "Our vision has always been to create an iPhone that is entirely screen. One so immersive the device itself disappears into the experience. And so intelligent it can respond to a tap, your voice and even a glance. With iPhone X, that vision is now a reality. Say hello to the future.\n\nWith iPhone X, the device is the display. An all‑new 5.8‑inch Super Retina screen fills the hand and dazzles the eyes.1\n\nThe display employs new techniques and technology to precisely follow the curves of the design, all the way to the elegantly rounded corners. The first OLED screen that rises to the standards of iPhone, with accurate, stunning colours, true blacks, high brightness and a 1,000,000 to 1 contrast ratio.\n\n"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "3hRooIWHComcWqa4CiMy8A",
+        "type": "Entry",
+        "createdAt": "2018-01-28T23:13:44.603Z",
+        "updatedAt": "2018-02-04T21:06:49.608Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 22,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 21,
+        "firstPublishedAt": "2018-01-28T23:15:17.577Z",
+        "publishedAt": "2018-02-04T21:06:49.608Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogArticle"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Apple’s First Store in South Korea Opens Saturday"
+        },
+        "urlSlug": {
+          "en-US": "apple-first-store-south-korea"
+        },
+        "shortBody": {
+          "en-US": "Located in the heart of the Gangnam area, Apple Garosugil’s 25-foot glass facade blurs the lines between the street and store."
+        },
+        "longDescription": {
+          "en-US": "Seoul — Apple Garosugil will open in Seoul on Saturday at 10 a.m., bringing Apple’s products, in-store programming and services together for South Korean customers to experience for the first time all in one place. South of the Han River, in the heart of the Gangnam area, the store’s 25-foot glass facade invites visitors in from the tree-lined street, where interior trees mirror those outside, blurring the lines between the street and store.\n\n“We’re thrilled to open a new home for our customers in the vibrant city of Seoul and we look forward to continuing to grow in Korea,” said Angela Ahrendts, Apple’s senior vice president of Retail. “Our stores are gathering places for the community where everyone is welcome to connect, learn and create.”"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2DKXfqYoowuCqcoQYmYE8e"
+            }
+          }
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "iSgs6iZDmSmeUsoS8cGey"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "55N9kVthJYwOQYweg6Gi82",
+        "type": "Entry",
+        "createdAt": "2018-01-28T23:15:39.099Z",
+        "updatedAt": "2018-02-04T21:06:48.815Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 27,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 26,
+        "firstPublishedAt": "2018-01-28T23:16:54.986Z",
+        "publishedAt": "2018-02-04T21:06:48.815Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogArticle"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Logic Pro X Update Includes Smart Tempo Feature and Powerful Effect Plug-ins"
+        },
+        "urlSlug": {
+          "en-US": "logic-pro-x-update"
+        },
+        "shortBody": {
+          "en-US": "Latest update to Logic Pro X features tempo detection technology and a range of new effect plug-ins."
+        },
+        "longDescription": {
+          "en-US": "Today Apple announced the next update to Logic Pro X, its professional music production software, featuring a breakthrough new tempo detection technology and a number of powerful effect plug-ins, giving musicians even more creative control and flexibility with their projects.\n\n## Smart Tempo\n\n\nSmart Tempo is a new advanced tempo detection technology that automatically manages tempo across all the content in a project. Smart Tempo gives users the freedom to record naturally without a metronome or click track, yet still have their performance stay in sync with any other tempo-based content or features in a project. It's also easy to combine recordings from different sources with varying tempos, making it a valuable tool for electronic musicians who create remixes and mashups.\n\n"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3Kivr7nO7KWGWGOcoU8WMy"
+            }
+          }
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "iSgs6iZDmSmeUsoS8cGey"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "6ivtCtEzpmOMQuCaq6K6yY",
+        "type": "Entry",
+        "createdAt": "2018-01-28T23:38:28.903Z",
+        "updatedAt": "2018-02-04T21:06:48.327Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 38,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 37,
+        "firstPublishedAt": "2018-01-28T23:40:54.479Z",
+        "publishedAt": "2018-02-04T21:06:48.327Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogArticle"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Apple Teams With Malala Fund to Support Girls’ Education"
+        },
+        "urlSlug": {
+          "en-US": "apple-teams-malala-fund"
+        },
+        "shortBody": {
+          "en-US": "Apple CEO Tim Cook and Nobel Peace Prize Laureate Malala Yousafzai visit with Lebanese and Syrian students in Beirut, Lebanon."
+        },
+        "longDescription": {
+          "en-US": "London — Apple and Malala Fund today announced that Apple will become the fund’s first Laureate partner, enabling a significant expansion of Malala’s effort to support girls’ education and advocate for equal opportunity. Led by Nobel Peace Prize Laureate Malala Yousafzai, Malala Fund champions every girl’s right to 12 years of free, safe, quality education.\nWith Apple’s support, Malala Fund expects to double the number of grants awarded by its Gulmakai Network and extend funding programs to India and Latin America with the initial goal of extending secondary education opportunities to more than 100,000 girls.\n\n\n![Malala Yousafzai Beirut Lebanon 01212018 big.jpg.large](//images.contentful.com/hpty8kufn7nl/6TxGvwaLpmGi8k6uGaCioe/cba774c0d071a122b8c1d13bf382a3ec/Malala_Yousafzai_Beirut_Lebanon_01212018_big.jpg.large.jpg)\n\n\nApple will help Malala Fund scale its organization by assisting with technology, curriculum and research into policy changes needed to help girls everywhere attend school and complete their education. Tim Cook, Apple’s CEO, will also join the Malala Fund leadership council.\n\n“My dream is for every girl to choose her own future,” said Malala Yousafzai. “Through both their innovations and philanthropy, Apple has helped educate and empower people around the world. I am grateful that Apple knows the value of investing in girls and is joining Malala Fund in the fight to ensure all girls can learn and lead without fear.”"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3yRvyfGaSsKEUIW0EWs6km"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "1AyrjXTc7uIkISGyKGmucU",
+        "type": "Entry",
+        "createdAt": "2018-01-29T03:51:53.098Z",
+        "updatedAt": "2018-02-04T21:06:45.089Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 27,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 26,
+        "firstPublishedAt": "2018-01-29T03:59:22.213Z",
+        "publishedAt": "2018-02-04T21:06:45.089Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "event"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Apple Fifth Avenue"
+        },
+        "subtitle": {
+          "en-US": "767 5th Ave, New York, NY 10153, USA"
+        },
+        "urlSlug": {
+          "en-US": "apple-fifth-avenue"
+        },
+        "date": {
+          "en-US": "2018-01-18T00:00-04:00"
+        },
+        "location": {
+          "en-US": {
+            "lon": -73.97297850000001,
+            "lat": 40.7638478
+          }
+        },
+        "description": {
+          "en-US": "![apple-fifth-avenue-new-york-city](//images.contentful.com/hpty8kufn7nl/2g44GPPNW0iCOk8MWYUcOM/4db8b85ffc019df7fc7fb1e344baba85/apple-fifth-avenue-new-york-city.jpg)\n\nEarlier this year, Apple began renovations of its Fifth Avenue retail store with the goal of more than doubling its size. Details on the project have been somewhat unclear throughout the project, but a new report today from MacMagazine says that Apple’s flagship retail location will reopen towards the end of 2018…\n\n Spigen TEKA RA200 Airpods Earhooks Cover\nThe report explains that construction is currently slated to come to an end on October 31st, 2018, that’s according to signage posted around the construction site. As with all construction projects, however, there is of course room for error and that date could certainly be pushed back.\n\nWith construction on track to end on October 31st, 2018, it’s likely that Apple will reopen its Fifth Avenue location sometime in November. That would mean that the retail store would be open in time for the United States holiday shopping season, one of the busiest times of the year for both Apple and New York City.\n\nApple commenced renovations on its Fifth Avenue retail store in January of this year. The company is working to more than double the size of the store, from around 32,000-square-feet to 77,000-square-feet. The new retail store will also feature a dedicated Beats 1 broadcasting booth, allowing for hosts to broadcast straight from the retail store.\n\nTo make the renovation job easier, Apple has removed the iconic glass cube that normally encompasses the Fifth Avenue location.  In the meantime, Apple has opened a temporary replacement location adjacent to the normal Fifth Avenue store. The temporary store is right next door and was formerly occupied by toy retailer FAO Schwarz."
+        },
+        "products": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3r1mcGhP3qOGoGYQQkwcCW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1JUyiJQYaU8mikEqOakUYc"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7uOXigjzZmkS6KWs8M4ME8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2blN319ptyGweooUO2muo2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "7uOXigjzZmkS6KWs8M4ME8",
+        "type": "Entry",
+        "createdAt": "2018-01-28T19:28:11.205Z",
+        "updatedAt": "2018-02-04T21:06:45.726Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 35,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 34,
+        "firstPublishedAt": "2018-01-28T19:30:14.704Z",
+        "publishedAt": "2018-02-04T21:06:45.726Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPhone X"
+        },
+        "urlSlug": {
+          "en-US": "iphone-x"
+        },
+        "cost": {
+          "en-US": 895.99
+        },
+        "descriptionShort": {
+          "en-US": "iPhone X features an all-screen design with a 5.8-inch Super Retina HD display with HDR and True Tone. Designed with the most durable glass ever in a smartphone and a surgical-grade stainless steel band."
+        },
+        "descriptionLong": {
+          "en-US": "iPhone X features an all-screen design with a 5.8-inch Super Retina HD display with HDR and True Tone. Designed with the most durable glass ever in a smartphone and a surgical-grade stainless steel band. Charges wirelessly (charging mat sold separately). Face ID lets you unlock and use Apple Pay with just a glance. Supports augmented reality experiences in games and apps. With iPhone X, the next era of iPhone has begun.\n\nMore Information\n- 5.8-inch Super Retina HD display with HDR and True Tone\n- All-glass and stainless steel design, water- and dust-resistant\n- 12MP dual cameras with dual OIS, Portrait mode, Portrait Lighting and 4K video up to 60 fps\n- 7MP TrueDepth front camera with Portrait mode, Portrait Lighting\n- Face ID for secure authentication and Apple Pay\n- A11 Bionic, the most powerful and smartest chip in a smartphone\n- Wireless charging -- works with Qi chargers"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3QooOHVSo0AWwS0Ugwi6s6"
+            }
+          }
+        },
+        "relatedProducts": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3r1mcGhP3qOGoGYQQkwcCW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1JUyiJQYaU8mikEqOakUYc"
+              }
+            }
+          ]
+        },
+        "additionalProducts": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2blN319ptyGweooUO2muo2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "1JUyiJQYaU8mikEqOakUYc",
+        "type": "Entry",
+        "createdAt": "2018-01-28T19:25:09.685Z",
+        "updatedAt": "2018-02-04T21:06:46.596Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 33,
+        "firstPublishedAt": "2018-01-28T19:27:21.403Z",
+        "publishedAt": "2018-02-04T21:06:46.596Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPhone 8"
+        },
+        "urlSlug": {
+          "en-US": "iphone-8"
+        },
+        "cost": {
+          "en-US": 439.99
+        },
+        "descriptionShort": {
+          "en-US": "A new generation of iPhone, the iPhone 8 is designed with the most durable glass ever in a smartphone and a stronger aerospace-grade aluminum band. Charges wirelessly. Resists water and dust. 4.7-inch Retina HD display with True Tone."
+        },
+        "descriptionLong": {
+          "en-US": "More Information\n- 4.7-inch Retina HD display with True Tone\n- All-glass and aluminum design, water- and dust resistant\n- 12MP camera with OIS and 4K video up to 60fps\n- 7MP FaceTime HD camera with Retina Flash for stunning selfies\n- Touch ID for secure authentication and Apple Pay\n- A11 Bionic, the most powerful and smartest chip in a smartphone\n- Wireless charging -- works with Qi chargers (sold separately)"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "38jpGl7Ab6IcGo2eWUEeOI"
+            }
+          }
+        },
+        "relatedProducts": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3r1mcGhP3qOGoGYQQkwcCW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7uOXigjzZmkS6KWs8M4ME8"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "3r1mcGhP3qOGoGYQQkwcCW",
+        "type": "Entry",
+        "createdAt": "2018-01-28T19:13:15.825Z",
+        "updatedAt": "2018-02-04T21:06:47.576Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 28,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 27,
+        "firstPublishedAt": "2018-01-28T19:25:04.534Z",
+        "publishedAt": "2018-02-04T21:06:47.576Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPhone 7"
+        },
+        "urlSlug": {
+          "en-US": "iphone-7"
+        },
+        "cost": {
+          "en-US": 329.99
+        },
+        "descriptionShort": {
+          "en-US": "An entirely new camera system. The brightest, most colourful iPhone display ever. The fastest performance and best battery life in an iPhone. Water- and splash-resistant. And stereo speakers. Every bit as powerful as it looks -- this is iPhone 7."
+        },
+        "descriptionLong": {
+          "en-US": "More Information\n- 4.7-inch (diagonal) Retina HD display with 1334-by-750 resolution and wide colour\n- 3D Touch\n- New 12MP camera, optical image stabilization, Quad-LED True Tone flash and Live Photos\n- Splash-, water- and dust-resistant\n- A10 Fusion chip with integrated M10 motion coprocessor\n- 4K video recording at 30fps and slo-mo video recording for 1080p at 120fps\n- 7MP FaceTime HD camera with Retina Flash\n- Touch ID fingerprint sensor built into the new Home button\n- LTE Advanced up to 450Mbps and 802.11a/b/g/n/ac Wi-Fi with MIMO\n- iOS 10 and iCloud"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3DW1AS4ijCgKmMUosMomqs"
+            }
+          }
+        },
+        "relatedProducts": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1JUyiJQYaU8mikEqOakUYc"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7uOXigjzZmkS6KWs8M4ME8"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "7EkEqeYoVO2GYCyakOqq4g",
+        "type": "Asset",
+        "createdAt": "2018-01-28T00:20:18.746Z",
+        "updatedAt": "2018-02-04T21:06:22.470Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 17,
+        "firstPublishedAt": "2018-01-28T00:20:27.533Z",
+        "publishedAt": "2018-02-04T21:06:22.470Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "jefferson-santos-450403"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/7EkEqeYoVO2GYCyakOqq4g/0857dc04996313a95ad7ac5e265eae96/andrea-cau-51160.jpg",
+            "details": {
+              "size": 669732,
+              "image": {
+                "width": 1920,
+                "height": 1280
+              }
+            },
+            "fileName": "andrea-cau-51160.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "1EjcGk9UfuI0WaKqw0aWWu",
+        "type": "Asset",
+        "createdAt": "2018-01-28T00:38:47.975Z",
+        "updatedAt": "2018-02-04T21:06:39.875Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 16,
+        "firstPublishedAt": "2018-01-28T00:39:04.525Z",
+        "publishedAt": "2018-02-04T21:06:39.875Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "dhruv-deshmukh-350946"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/1EjcGk9UfuI0WaKqw0aWWu/2b20cf260ac01c301fddce7758344b26/rob-bye-30850.jpg",
+            "details": {
+              "size": 3686463,
+              "image": {
+                "width": 3152,
+                "height": 1896
+              }
+            },
+            "fileName": "rob-bye-30850.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "5e07cHsuQMAoqI0i4s4gGe",
+        "type": "Asset",
+        "createdAt": "2018-01-28T02:11:54.152Z",
+        "updatedAt": "2018-02-04T21:06:39.166Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T02:24:03.363Z",
+        "publishedAt": "2018-02-04T21:06:39.166Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "charlie-deets-69870"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/5e07cHsuQMAoqI0i4s4gGe/b051147e70425ebc15b1978afacedc38/charlie-deets-69870.jpg",
+            "details": {
+              "size": 195560,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "charlie-deets-69870.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "UQQ42IwUYoYaiqISigMaY",
+        "type": "Asset",
+        "createdAt": "2018-01-28T02:16:41.453Z",
+        "updatedAt": "2018-02-04T21:06:38.214Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T02:24:03.413Z",
+        "publishedAt": "2018-02-04T21:06:38.214Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "kirk-morales-103361"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/UQQ42IwUYoYaiqISigMaY/220c3e70ed2053dff2b78d2c940a622f/kirk-morales-103361.jpg",
+            "details": {
+              "size": 177065,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "kirk-morales-103361.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "4vytNsB5ZYosAakawO060c",
+        "type": "Asset",
+        "createdAt": "2018-01-28T02:19:13.941Z",
+        "updatedAt": "2018-02-04T21:06:37.604Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T02:24:03.384Z",
+        "publishedAt": "2018-02-04T21:06:37.604Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "namphuong-van-260"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/4vytNsB5ZYosAakawO060c/70cd2d5b1016daa522efdab6d73fefe0/namphuong-van-260.jpg",
+            "details": {
+              "size": 225090,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "namphuong-van-260.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "H0xlMkCqcu2eYWqIgSgwE",
+        "type": "Asset",
+        "createdAt": "2018-01-28T03:09:46.458Z",
+        "updatedAt": "2018-02-04T21:06:36.921Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T03:19:07.354Z",
+        "publishedAt": "2018-02-04T21:06:36.921Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "26070691 1735028173473821 8964705398070181888 n"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/H0xlMkCqcu2eYWqIgSgwE/a8d594849e803755d63e5d2af1a8b0cf/26070691_1735028173473821_8964705398070181888_n.jpg",
+            "details": {
+              "size": 169860,
+              "image": {
+                "width": 589,
+                "height": 519
+              }
+            },
+            "fileName": "26070691_1735028173473821_8964705398070181888_n.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "3DW1AS4ijCgKmMUosMomqs",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:17:19.293Z",
+        "updatedAt": "2018-02-04T21:06:35.853Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 27,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 26,
+        "firstPublishedAt": "2018-01-28T19:23:55.118Z",
+        "publishedAt": "2018-02-04T21:06:35.853Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPhone 7"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/3DW1AS4ijCgKmMUosMomqs/738ea844c5ee2361ab8b7537309bc974/jaz-king-221367.jpg",
+            "details": {
+              "size": 175056,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "jaz-king-221367.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "38jpGl7Ab6IcGo2eWUEeOI",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:27:23.872Z",
+        "updatedAt": "2018-02-04T21:06:34.954Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T19:27:56.471Z",
+        "publishedAt": "2018-02-04T21:06:34.954Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "james-mckinven-455038"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/38jpGl7Ab6IcGo2eWUEeOI/dde2243c24adead21f1cc7e51e5fa448/james-mckinven-455038.jpg",
+            "details": {
+              "size": 85303,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "james-mckinven-455038.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "3QooOHVSo0AWwS0Ugwi6s6",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:29:03.901Z",
+        "updatedAt": "2018-02-04T21:06:34.037Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 17,
+        "firstPublishedAt": "2018-01-28T19:29:30.526Z",
+        "publishedAt": "2018-02-04T21:06:34.037Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "iphone x"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/3QooOHVSo0AWwS0Ugwi6s6/2cfe43ed13649d05506fa073fbb9454c/alvaro-reyes-500037.jpg",
+            "details": {
+              "size": 160925,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "alvaro-reyes-500037.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "7jRQnVb9040cAGkgEio6SU",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:33:50.123Z",
+        "updatedAt": "2018-02-04T21:06:14.434Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "version": 10
+      },
+      "fields": {
+        "title": {
+          "en-US": "article-accessory-powerbeats2 wireless-earphones-lifestyle"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/7jRQnVb9040cAGkgEio6SU/845ecfc2a5aeb8f0a257a244ac7acee4/article-accessory-powerbeats2_wireless-earphones-lifestyle.jpg",
+            "details": {
+              "size": 160925,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "article-accessory-powerbeats2 wireless-earphones-lifestyle.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "1WcfRA8nNG8YsAUugiywMS",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:34:13.057Z",
+        "updatedAt": "2018-02-04T21:05:54.287Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "version": 7
+      },
+      "fields": {
+        "title": {
+          "en-US": "article-accessory-powerbeats2 wireless-earphones-lifestyle"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "sadsBqEvv2Q6KY6Cg2Wu8",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:39:17.191Z",
+        "updatedAt": "2018-02-04T21:06:33.021Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 20,
+        "firstPublishedAt": "2018-01-28T19:39:56.408Z",
+        "publishedAt": "2018-02-04T21:06:33.021Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "beats over-ear"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/sadsBqEvv2Q6KY6Cg2Wu8/d150e98c29cf75df05594f478b8bbc31/mubariz-mehdizadeh-427362.jpg",
+            "details": {
+              "size": 118032,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "mubariz-mehdizadeh-427362.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "4apkpEpgQ8KUAQa6MKMgMI",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:41:36.245Z",
+        "updatedAt": "2018-02-04T21:06:32.323Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 17,
+        "firstPublishedAt": "2018-01-28T19:41:46.700Z",
+        "publishedAt": "2018-02-04T21:06:32.323Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "beats solo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/4apkpEpgQ8KUAQa6MKMgMI/8e4bdc6ed2cdd2970592f42421a141f8/neonbrand-281104.jpg",
+            "details": {
+              "size": 184092,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "neonbrand-281104.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "29eb6oOh3SamygMS8woeCG",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:43:44.223Z",
+        "updatedAt": "2018-02-04T21:06:31.590Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 19,
+        "firstPublishedAt": "2018-01-28T19:44:07.912Z",
+        "publishedAt": "2018-02-04T21:06:31.590Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Apple Airpods"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/29eb6oOh3SamygMS8woeCG/881835a198bc8ab7a8cd6a45bc93a8ee/kui-ye-chen-359084.jpg",
+            "details": {
+              "size": 53877,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "kui-ye-chen-359084.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "5Crikb6CzK4qisakC6io6K",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:54:07.583Z",
+        "updatedAt": "2018-02-04T21:05:53.581Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "version": 3
+      },
+      "fields": {
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "5ZeSe1gfHUKWQoY0K0SMw0",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:54:28.583Z",
+        "updatedAt": "2018-02-04T21:06:31.283Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T20:16:34.964Z",
+        "publishedAt": "2018-02-04T21:06:31.283Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "dr-dre-beats-jason-prahl-s-blog-archive-hp-envy-audio-189138"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/5ZeSe1gfHUKWQoY0K0SMw0/5b64405a26ebaf3cfb6e81e7f29cf9d2/dr-dre-beats-jason-prahl-s-blog-archive-hp-envy-audio-189138.jpg",
+            "details": {
+              "size": 42782,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "dr-dre-beats-jason-prahl-s-blog-archive-hp-envy-audio-189138.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "56pGIAuayc4UWyUui8EseI",
+        "type": "Asset",
+        "createdAt": "2018-01-28T19:57:18.865Z",
+        "updatedAt": "2018-02-04T21:06:30.702Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T19:58:01.905Z",
+        "publishedAt": "2018-02-04T21:06:30.702Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "ben-kolde-464681"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/56pGIAuayc4UWyUui8EseI/d39ad09cff4627a6b6a15130325049fc/ben-kolde-464681.jpg",
+            "details": {
+              "size": 126123,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "ben-kolde-464681.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "2DKXfqYoowuCqcoQYmYE8e",
+        "type": "Asset",
+        "createdAt": "2018-01-28T23:14:42.795Z",
+        "updatedAt": "2018-02-04T21:06:29.693Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T23:15:09.461Z",
+        "publishedAt": "2018-02-04T21:06:29.693Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Seoul-Apple-Garosugil-01242018"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/2DKXfqYoowuCqcoQYmYE8e/d2ee00a5ac1affce47e0a78524ddb532/Seoul-Apple-Garosugil-01242018.jpg",
+            "details": {
+              "size": 238448,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "Seoul-Apple-Garosugil-01242018.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "3Kivr7nO7KWGWGOcoU8WMy",
+        "type": "Asset",
+        "createdAt": "2018-01-28T23:16:30.313Z",
+        "updatedAt": "2018-02-04T21:06:29.089Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T23:16:49.644Z",
+        "publishedAt": "2018-02-04T21:06:29.089Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "logic pro x update studio setup 012418 big.jpg.large"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/3Kivr7nO7KWGWGOcoU8WMy/77588a59db3a53926ce67d06b72c3add/logic_pro_x_update_studio_setup_012418_big.jpg.large.jpg",
+            "details": {
+              "size": 122856,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "logic_pro_x_update_studio_setup_012418_big.jpg.large.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "DEwgMZxIY0gkUw0uQeKC2",
+        "type": "Asset",
+        "createdAt": "2018-01-28T23:31:03.791Z",
+        "updatedAt": "2018-02-04T21:06:28.587Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 10,
+        "firstPublishedAt": "2018-01-28T23:32:46.999Z",
+        "publishedAt": "2018-02-04T21:06:28.587Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "tom-the-photographer-303207"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/DEwgMZxIY0gkUw0uQeKC2/3c9a9c0e3ea7f571c2b40410a589a210/tom-the-photographer-303207.jpg",
+            "details": {
+              "size": 2419576,
+              "image": {
+                "width": 5472,
+                "height": 3648
+              }
+            },
+            "fileName": "tom-the-photographer-303207.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "2VQAWfvTa8gqGqSCIo42Ge",
+        "type": "Asset",
+        "createdAt": "2018-01-28T23:35:50.149Z",
+        "updatedAt": "2018-02-04T21:06:27.899Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T23:36:25.721Z",
+        "publishedAt": "2018-02-04T21:06:27.899Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "julian-o-hayon-237297"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/2VQAWfvTa8gqGqSCIo42Ge/70efc4d4f82381194250299df64cd676/julian-o-hayon-237297.jpg",
+            "details": {
+              "size": 1257153,
+              "image": {
+                "width": 3376,
+                "height": 2724
+              }
+            },
+            "fileName": "julian-o-hayon-237297.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "5DBisSodc44scoiG0q6muC",
+        "type": "Asset",
+        "createdAt": "2018-01-28T23:37:28.911Z",
+        "updatedAt": "2018-02-04T21:06:27.055Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T23:38:06.211Z",
+        "publishedAt": "2018-02-04T21:06:27.055Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "radek-grzybowski-66457"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/5DBisSodc44scoiG0q6muC/b33ed3315fc787f886de5721dfeb59fd/radek-grzybowski-66457.jpg",
+            "details": {
+              "size": 3451844,
+              "image": {
+                "width": 3165,
+                "height": 2019
+              }
+            },
+            "fileName": "radek-grzybowski-66457.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "6TxGvwaLpmGi8k6uGaCioe",
+        "type": "Asset",
+        "createdAt": "2018-01-28T23:39:16.976Z",
+        "updatedAt": "2018-02-04T21:06:26.084Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 8,
+        "firstPublishedAt": "2018-01-28T23:39:19.239Z",
+        "publishedAt": "2018-02-04T21:06:26.084Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Malala Yousafzai Beirut Lebanon 01212018 big.jpg.large"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/6TxGvwaLpmGi8k6uGaCioe/a34172d332489c17820ecafb0c920b95/Malala_Yousafzai_Beirut_Lebanon_01212018_big.jpg.large.jpg",
+            "details": {
+              "size": 116075,
+              "image": {
+                "width": 816,
+                "height": 539
+              }
+            },
+            "fileName": "Malala_Yousafzai_Beirut_Lebanon_01212018_big.jpg.large.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "3yRvyfGaSsKEUIW0EWs6km",
+        "type": "Asset",
+        "createdAt": "2018-01-28T23:40:01.512Z",
+        "updatedAt": "2018-02-04T21:06:25.498Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 12,
+        "firstPublishedAt": "2018-01-28T23:40:42.321Z",
+        "publishedAt": "2018-02-04T21:06:25.498Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Tim Cook visits students Beirut Lebanon 01212018 big.jpg.large"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/3yRvyfGaSsKEUIW0EWs6km/96c785681c5d9606a5610510779e2696/Tim_Cook_visits_students_Beirut_Lebanon_01212018_big.jpg.large.jpg",
+            "details": {
+              "size": 216115,
+              "image": {
+                "width": 700,
+                "height": 400
+              }
+            },
+            "fileName": "Tim_Cook_visits_students_Beirut_Lebanon_01212018_big.jpg.large.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "vocDMFw8xioeSWW4mmEAc",
+        "type": "Asset",
+        "createdAt": "2018-01-29T02:33:54.352Z",
+        "updatedAt": "2018-02-04T21:06:24.831Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 10,
+        "firstPublishedAt": "2018-01-29T02:34:01.780Z",
+        "publishedAt": "2018-02-04T21:06:24.831Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "william-hook-476194"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/vocDMFw8xioeSWW4mmEAc/2c048a8f25ef3dd123bbf3817ea9cf6d/william-hook-476194.jpg",
+            "details": {
+              "size": 3720828,
+              "image": {
+                "width": 5184,
+                "height": 3456
+              }
+            },
+            "fileName": "william-hook-476194.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "4402GrwTf2CEUk6u6uUIeo",
+        "type": "Asset",
+        "createdAt": "2018-01-29T02:40:46.096Z",
+        "updatedAt": "2018-02-04T21:05:51.765Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "version": 3
+      },
+      "fields": {
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "xPmMNRMM9w6I2WgOW6CCO",
+        "type": "Asset",
+        "createdAt": "2018-01-29T02:41:20.256Z",
+        "updatedAt": "2018-02-04T21:06:24.024Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 10,
+        "firstPublishedAt": "2018-01-29T02:41:29.205Z",
+        "publishedAt": "2018-02-04T21:06:24.023Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "alvaro-reyes-500037 (1)"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/xPmMNRMM9w6I2WgOW6CCO/53d965e71be7ed142ae2340945530840/alvaro-reyes-500037__1_.jpg",
+            "details": {
+              "size": 3538602,
+              "image": {
+                "width": 5184,
+                "height": 3456
+              }
+            },
+            "fileName": "alvaro-reyes-500037 (1).jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "2g44GPPNW0iCOk8MWYUcOM",
+        "type": "Asset",
+        "createdAt": "2018-01-29T03:55:06.832Z",
+        "updatedAt": "2018-02-04T21:06:23.656Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 8,
+        "firstPublishedAt": "2018-01-29T03:55:09.120Z",
+        "publishedAt": "2018-02-04T21:06:23.656Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "apple-fifth-avenue-new-york-city"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/2g44GPPNW0iCOk8MWYUcOM/362105dfcf7b14f1f541c5b55005e219/apple-fifth-avenue-new-york-city.jpg",
+            "details": {
+              "size": 212123,
+              "image": {
+                "width": 1600,
+                "height": 800
+              }
+            },
+            "fileName": "apple-fifth-avenue-new-york-city.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "5qE0tvttniSUk42GQIykK",
+        "type": "Asset",
+        "createdAt": "2018-01-30T22:34:38.226Z",
+        "updatedAt": "2018-02-04T21:06:23.180Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "publishedVersion": 20,
+        "firstPublishedAt": "2018-01-30T22:34:52.540Z",
+        "publishedAt": "2018-02-04T21:06:23.180Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "josh-felise-55613"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/5qE0tvttniSUk42GQIykK/fef8c14808e1116b611dfd98e0f2b913/daniel-jensen-341375.jpg",
+            "details": {
+              "size": 499399,
+              "image": {
+                "width": 3280,
+                "height": 922
+              }
+            },
+            "fileName": "daniel-jensen-341375.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "id": "25z19AgYjm026mUqAyAeC2",
+        "type": "Asset",
+        "createdAt": "2018-02-01T03:14:52.400Z",
+        "updatedAt": "2018-02-04T21:05:59.276Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "version": 8
+      },
+      "fields": {
+        "title": {
+          "en-US": "iris-papillon-43210"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/hpty8kufn7nl/25z19AgYjm026mUqAyAeC2/4f41c925b5b1e4631942932051052dcd/iris-papillon-43210.jpg",
+            "details": {
+              "size": 2941583,
+              "image": {
+                "width": 3648,
+                "height": 5472
+              }
+            },
+            "fileName": "iris-papillon-43210.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "US English",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "5OPbAQquDnUNjSm9FJXggO",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "createdAt": "2018-01-27T20:29:49Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedAt": "2018-01-27T20:29:49Z"
+      }
+    },
+    {
+      "name": "Spanish",
+      "code": "es",
+      "fallbackCode": "en-US",
+      "default": false,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "45oJCRn9wqdpCkxIBhM4ti",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "createdAt": "2018-01-31T04:31:26Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedAt": "2018-01-31T04:31:26Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Developer",
+      "description": "Allows reading Entries and managing API Keys",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": "all"
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5OPQX9exuX0VurJiOPkEqK",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "createdAt": "2018-01-27T20:29:49Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedAt": "2018-01-27T20:29:49Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5OQmZjy67Bc0LSbufrwhOW",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "hpty8kufn7nl"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "createdAt": "2018-01-27T20:29:50Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "58JeMweewsYJ4ForTlW2zu"
+          }
+        },
+        "updatedAt": "2018-01-27T20:29:50Z"
+      }
+    }
+  ]
+}
