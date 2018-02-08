@@ -4,7 +4,7 @@ The project is a quick starter for AngularJS applications consuming content from
 
 You just have to sign-up for a Contentful account which is totally free, create a space and grab your "Management" API key for when you initialize the project. We'll import the sample content model along with the content to your space so you have a starting point to experiment from. It's quick and simple to register for a space, as is the upload process for the sample data into your own space.
 
-You can then customize the content model to your liking as the content model and data will be under your own personal Contentful space. Shout-out to [Stefan Judis](https://github.com/stefanjudis) from Contentful for the heads up about the import module.
+You can then customize the content model to your liking as the content model and data will be under your own personal Contentful space. Shout-out to [Stefan Judis](https://github.com/stefanjudis) from Contentful for the heads up about the import & export modules.
 
 <img src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg" width="225" style="margin-left: 20px;" /><img src="https://angular.io/assets/images/logos/angular/angular.png" width="80" /><img src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" width="60" />
 
@@ -45,18 +45,19 @@ Read more about the [authentication tokens on Contentful](https://www.contentful
 ```shell
 git clone https://github.com/joshhebb/angularjs-contentful-starter.git your-project-name-here
 cd your-project-name-here
+npm install -g gulp               # Install Gulp (global)
+npm install -g bower              # Install Bower (global)
 npm run init                      # Run init task to install the node modules, libraries and then call gulp to build the app.
 
-Starting the Contentful Import Process..
+Starting the Contentful Export & Import Process..
 Please enter your Contentful Space ID and your Content Delivery / Management Tokens.
 You can find those values in Contentful under your space.
 
 prompt: spaceId:  your-space-id
 prompt: accessToken:  your-content-delivery-access-token
-prompt: previewToken: your-preview-access-token
 prompt: managementToken:  22 your-content-management-token
 
-# The models and content are then uploaded into your space from the json file in the bin directory.
+# The models & content are then exported from the sample space and uploaded into the space you created.
 
 ```
 
