@@ -1,4 +1,3 @@
 angular.module("angular-contentful-starter")
 .constant("spaceId", "")
-.constant("accessToken", "")
-.constant("managementToken", "");
+.constant("accessToken", "");

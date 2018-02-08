@@ -27,9 +27,9 @@ You can find a demo of the site hosted here:
 
 * [Node](https://nodejs.org/en/download/) (npm)
 
-At the time of writing this guide, I was on **node v8.9.4** and **npm v4.6.1**. 
+At the time of writing this guide, I was on **node v8.9.4** and **npm v4.6.1**.
 
-*NodeJS is a javascript runtime built on Chromes V8 Javascript engine, 
+*NodeJS is a javascript runtime built on Chromes V8 Javascript engine,
 and npm is simply a node package which is a package manage in itself. It allows you to install all other packages that you will be using. It can be installed with a simple installer on their website.*
 
 
@@ -51,8 +51,6 @@ Read more about the [authentication tokens on Contentful](https://www.contentful
 ```shell
 git clone https://github.com/joshhebb/angularjs-contentful-starter.git your-project-name-here
 cd your-project-name-here
-npm install -g gulp               # Install Gulp (global)
-npm install -g bower              # Install Bower (global)
 npm run init                      # Run init task to install the node modules, libraries and then call gulp to build the app.
 
 Starting the Contentful Export & Import Process..
@@ -81,17 +79,17 @@ One of the cool things about Contentful is that it ships with an export and an i
 Take a quick scan through the following gulp commands thats that you can run for the project.
 
 ```shell
-# build (also starts livereload for development)
-gulp
+# build and start (also starts livereload for development)
+npm start
 
-# build the project 
-gulp build
+# build the project
+npm run build
 
 # start the project in dev mode (starts livereload for development)
-gulp dev
+npm run dev
 
 # update npm & bower
-gulp update
+npm run update
 ```
 
 Open the following URLs in your browser:
@@ -102,7 +100,7 @@ Keeping in mind you'll only be able to open the node instance if you started liv
 
 ### Developing Workflow
 
-The process for developing with the app couldn't be easier. Once you have the project downloaded and setup start livereload via one of the various gulp commands (gulp dev, gulp) and start editing away! 
+The process for developing with the app couldn't be easier. Once you have the project downloaded and setup start livereload via one of the various gulp commands (gulp dev, gulp) and start editing away!
 
 When editing in livereload - you'll see your changes reflected in the browser reflected in real time; no reloading whatsoever as long as livereload is running in the command line.
 
